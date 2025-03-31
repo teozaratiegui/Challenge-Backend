@@ -1,0 +1,27 @@
+import amqp from 'amqplib'
+import { IFilePublisher } from 'app/protocols/filePublisher'
+
+export class RabbitMQPublisher implements IFilePublisher {
+  private readonly url = 'amqp://localhost'
+
+  async send(queue: string, message: any): Promise<void> {
+    try {
+      const connection = await amqp.connect(this.url)
+      const channel = await connection.createChannel()
+
+      await channel.assertQueue(queue, { durable: true })
+
+      channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)), {
+        persistent: true, // asegura que el mensaje sobreviva un reinicio de RabbitMQ
+      })
+
+      console.log(`📤 Mensaje enviado a la cola "${queue}":`, message)
+
+      await channel.close()
+      await connection.close()
+    } catch (error) {
+      console.error(`❌ Error enviando mensaje a la cola "${queue}":`, error)
+      throw error
+    }
+  }
+}
