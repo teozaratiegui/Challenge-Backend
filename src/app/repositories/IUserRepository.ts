@@ -1,6 +1,6 @@
-import { ICreateUserRequestDTO } from '@domain/dtos/User/ICreateUserRequestDTO';
-import { IFindByEmail } from '@domain/dtos/User/IFindByEmail';
-import { IUserOutRequestDTO } from '@domain/dtos/User/IUserOutRequestDTO';
+import { ICreateUserRequestDTO } from 'domain/dtos/User/ICreateUserRequestDTO';
+import { IFindByEmail } from 'domain/dtos/User/IFindByEmail';
+import { IUserOutRequestDTO } from 'domain/dtos/User/IUserOutRequestDTO';
 
 
 export interface IUserRepository {

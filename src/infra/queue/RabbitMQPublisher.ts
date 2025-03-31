@@ -4,7 +4,7 @@ import { IFilePublisher } from 'app/protocols/filePublisher'
 export class RabbitMQPublisher implements IFilePublisher {
   private readonly url = 'amqp://localhost'
 
-  async send(queue: string, message: any): Promise<void> {
+  async send(queue: string, message: { taskId: string; path: string }): Promise<void> {
     try {
       const connection = await amqp.connect(this.url)
       const channel = await connection.createChannel()
@@ -12,7 +12,7 @@ export class RabbitMQPublisher implements IFilePublisher {
       await channel.assertQueue(queue, { durable: true })
 
       channel.sendToQueue(queue, Buffer.from(JSON.stringify(message)), {
-        persistent: true, // asegura que el mensaje sobreviva un reinicio de RabbitMQ
+        persistent: true
       })
 
       console.log(`📤 Mensaje enviado a la cola "${queue}":`, message)

@@ -1,10 +1,25 @@
+import { IFileRepository } from 'app/repositories/iFileRepository'
 import { IFilePublisher } from 'app/protocols/filePublisher'
-import { IQueueFileUseCase } from 'app/useCases/files/queueFile'
+import { FileStatus } from 'domain/enums/files/fileStatus'
 
-export class QueueFileUseCase implements IQueueFileUseCase{
-  constructor(private publisher: IFilePublisher) {}
+export class QueueFileUseCase {
+  constructor(
+    private repository: IFileRepository,
+    private publisher: IFilePublisher
+  ) {}
 
-  async execute(filePath: string): Promise<void> {
-    await this.publisher.send('xlsx.upload', { path: filePath })
+  async execute(filePath: string): Promise<string> {
+    
+    const task = await this.repository.create({
+      filePath,
+      status: FileStatus.PENDING,
+    })
+
+    await this.publisher.send('xlsx.upload', {
+      taskId: task._id,
+      path: filePath,
+    })
+
+    return task._id
   }
 }

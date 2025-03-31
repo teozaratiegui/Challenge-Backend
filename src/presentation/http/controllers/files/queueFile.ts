@@ -14,9 +14,9 @@ export class UploadXlsxController implements IController {
       return new HttpResponse(400, { error: 'No file uploaded' })
     }
 
-    await this.useCase.execute(file.path)
+     const taskId = await this.useCase.execute(file.path)
 
-    const success = new HttpSuccess().success_202({ message: 'File encolado' })
+    const success = new HttpSuccess().success_202({ taskId })
     return new HttpResponse(success.statusCode, success.body)
   }
 }

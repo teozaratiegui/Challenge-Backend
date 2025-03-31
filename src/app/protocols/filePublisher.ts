@@ -1,4 +1,4 @@
 export interface IFilePublisher {
-    send(queue: string, message: any): Promise<void>
-}
+    send(queue: string, message: { taskId: string; path: string }): Promise<void>
+  }
   
