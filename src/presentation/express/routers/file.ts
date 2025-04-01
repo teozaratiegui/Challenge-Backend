@@ -4,6 +4,7 @@ import { upload } from 'presentation/express/middlewares/uploadMiddleware'
 import { expressAdapter } from 'presentation/adapters/expressAdapter'
 import { queueFile } from 'infra/services/composers/files/queueFile'
 import { logger } from 'infra/logger/logger'
+import { getFileStatus } from 'infra/services/composers/files/fileStatus'
 
 /**
  * Router for handling file upload (xlsx) operations.
@@ -22,5 +23,14 @@ uploadRoutes.post(
     return response.status(adapter.statusCode).json(adapter.body)
   }
 )
+
+uploadRoutes.get(
+    '/:id',
+    ensureAuthenticated('API_KEY_STATUS'),
+    async (request: Request, response: Response): Promise<any> => {
+      const adapter = await expressAdapter(request, getFileStatus())
+      return response.status(adapter.statusCode).json(adapter.body)
+    }
+  )
 
 export { uploadRoutes }

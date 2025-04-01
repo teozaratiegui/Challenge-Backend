@@ -27,6 +27,12 @@ export class FileRepository implements IFileRepository {
     const newTask = await task.save()
     return { _id: newTask._id.toString() }
   }
+
+  async findById(taskId: string): Promise<{ status: string } | null> {
+    const task = await UploadTaskModel.findById(taskId).exec()
+    if (!task) return null
+    return { status: task.status }
+  }
 }
 
 export default FileRepository
