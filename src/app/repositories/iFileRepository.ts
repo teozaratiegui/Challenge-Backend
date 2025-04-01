@@ -1,5 +1,5 @@
 export interface IFileRepository {
-    create(data: { filePath: string; status: string }): Promise<{ _id: string }>
+    create(data: { filePath: string; status: string }): Promise<{ uuid: string }>
 
     findById(id: string): Promise<{ status: string } | null>
 }

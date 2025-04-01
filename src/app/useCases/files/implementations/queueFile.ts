@@ -16,10 +16,10 @@ export class QueueFileUseCase {
     })
 
     await this.publisher.send('xlsx.upload', {
-      taskId: file._id,
+      taskId: file.uuid,
       path: filePath,
     })
 
-    return file._id
+    return file.uuid
   }
 }

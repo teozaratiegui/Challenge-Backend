@@ -12,11 +12,11 @@ export class GetFileStatusController implements IController {
 
   async handle(httpRequest: IHttpRequest): Promise<IHttpResponse> {
     const pathParams = httpRequest.path as { id?: string }
-    const taskId = pathParams?.id
+    const fileId = pathParams?.id
 
-    if (!taskId) throw new DomainError(FileErrors.MISSING_FILE_ID, 'Missing file id parameter')
+    if (!fileId) throw new DomainError(FileErrors.MISSING_FILE_ID, 'Missing file id parameter')
 
-    const status = await this.useCase.execute(taskId)
+    const status = await this.useCase.execute(fileId)
     const success = new HttpSuccess().success_200({ status })
     return new HttpResponse(success.statusCode, success.body)
   }
