@@ -1,10 +1,10 @@
 import { Request } from 'express'
-
 import { IController } from 'presentation/http/controllers/IController'
 import { IHttpRequest } from 'presentation/http/helpers/IHttpRequest'
 import { IHttpResponse } from 'presentation/http/helpers/IHttpResponse'
 import { HttpRequest } from 'presentation/http/helpers/implementations/HttpRequest'
 import { logger } from 'infra/logger/logger'
+import { mapDomainErrorToHttp } from 'presentation/http/helpers/errorMapper'
 
 /**
  * Adapts Express request to the application's request format and calls the provided controller.
@@ -25,6 +25,6 @@ export async function expressAdapter(
     query: request.query,
     file: request.file,
   })
-  const response: IHttpResponse = await apiRoute.handle(httpRequest)
-  return response
+  
+  return await apiRoute.handle(httpRequest)
 }

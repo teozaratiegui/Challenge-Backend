@@ -1,5 +1,7 @@
 import amqp from 'amqplib'
 import { IFilePublisher } from 'app/protocols/filePublisher'
+import { DomainError } from 'domain/entities/domainError';
+import { FileErrors } from 'domain/enums/files/fileErrors';
 
 export class RabbitMQPublisher implements IFilePublisher {
   private readonly url = 'amqp://localhost'
@@ -21,7 +23,7 @@ export class RabbitMQPublisher implements IFilePublisher {
       await connection.close()
     } catch (error) {
       console.error(`❌ Error enviando mensaje a la cola "${queue}":`, error)
-      throw error
+      throw new DomainError(FileErrors.RABBITMQ_ERROR, 'Failed to send message to RabbitMQ')
     }
   }
 }

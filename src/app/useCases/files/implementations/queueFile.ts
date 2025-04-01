@@ -10,16 +10,16 @@ export class QueueFileUseCase {
 
   async execute(filePath: string): Promise<string> {
     
-    const task = await this.repository.create({
+    const file = await this.repository.create({
       filePath,
       status: FileStatus.PENDING,
     })
 
     await this.publisher.send('xlsx.upload', {
-      taskId: task._id,
+      taskId: file._id,
       path: filePath,
     })
 
-    return task._id
+    return file._id
   }
 }

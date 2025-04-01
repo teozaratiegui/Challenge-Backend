@@ -22,7 +22,7 @@ userRoutes.post('/', async (request: Request, response: Response): Promise<any> 
  * Endpoint to get user information (requires authentication).
  */
 
-
+/*
 userRoutes.get(
   '/',
   ensureAuthenticated,
@@ -30,6 +30,6 @@ userRoutes.get(
     const adapter = await expressAdapter(request, getUsersComposer())
     return response.status(adapter.statusCode).json(adapter.body)
   },
-)
+)*/
 
 export { userRoutes }

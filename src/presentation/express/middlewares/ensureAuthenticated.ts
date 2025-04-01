@@ -1,4 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
+import { DomainError } from 'domain/entities/domainError'
+import { FileErrors } from 'domain/enums/files/fileErrors'
 
 /**
  * Factory to create a middleware that validates a specific API key based on .env variable name
@@ -9,20 +11,17 @@ export function ensureAuthenticated(envKeyName: string) {
     const apiKey = req.headers['api-key'] as string | undefined
 
     if (!apiKey) {
-      res.status(401).json({ error: 'API key missing' })
-      return
+      throw new DomainError(FileErrors.NO_API_KEY, 'API key missing')
     }
 
     const validApiKey = process.env[envKeyName]
 
     if (!validApiKey) {
-      res.status(500).json({ error: `Server misconfiguration: ${envKeyName} is missing` })
-      return
+      throw new DomainError(FileErrors.SERVER_MISCONFIG, `Missing env variable: ${envKeyName}`)
     }
 
     if (apiKey !== validApiKey) {
-      res.status(403).json({ error: 'Invalid API key' })
-      return
+      throw new DomainError(FileErrors.INVALID_API_KEY, 'Invalid API key')
     }
 
     next()
