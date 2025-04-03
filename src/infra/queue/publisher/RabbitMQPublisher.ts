@@ -6,7 +6,7 @@ import { FileErrors } from 'domain/enums/files/fileErrors';
 export class RabbitMQPublisher implements IFilePublisher {
   private readonly url = 'amqp://localhost'
 
-  async send(queue: string, message: { taskId: string; path: string }): Promise<void> {
+  async send(queue: string, message: { uuid: string; path: string }): Promise<void> {
     try {
       const connection = await amqp.connect(this.url)
       const channel = await connection.createChannel()

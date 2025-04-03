@@ -5,6 +5,7 @@ import { expressAdapter } from 'presentation/adapters/expressAdapter'
 import { queueFile } from 'infra/services/composers/files/queueFile'
 import { logger } from 'infra/logger/logger'
 import { getFileStatus } from 'infra/services/composers/files/fileStatus'
+import { getFileDataPage } from 'infra/services/composers/files/fileData'
 
 /**
  * Router for handling file upload (xlsx) operations.
@@ -36,6 +37,16 @@ uploadRoutes.get(
         response.status(adapter.statusCode).json(adapter.body)
       })
       .catch(next)
+    }
+  )
+
+  uploadRoutes.get(
+    '/:uuid/data',
+    ensureAuthenticated('API_KEY_DATA'),
+    async (request: Request, response: Response, next): Promise<any> => {
+      expressAdapter(request, getFileDataPage())
+        .then(adapter => response.status(adapter.statusCode).json(adapter.body))
+        .catch(next)
     }
   )
 

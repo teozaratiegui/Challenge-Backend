@@ -11,5 +11,5 @@ export interface IFileStatusUseCase {
      * @param {filePath} data - The id of the file.
      * @returns {Promise<void>} The response data.
      */
-    execute(data: string): Promise<string>
+    execute(data: string, page: number): Promise<string>
   }

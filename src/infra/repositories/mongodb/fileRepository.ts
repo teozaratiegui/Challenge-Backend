@@ -4,6 +4,7 @@ import { FileStatus } from 'domain/enums/files/fileStatus'
 import { DomainError } from 'domain/entities/domainError'
 import { FileErrors } from 'domain/enums/files/fileErrors'
 import { v4 as uuidv4 } from 'uuid'
+import { logger } from 'infra/logger/logger'
 
 const FileSchema = new mongoose.Schema(
   {
@@ -41,6 +42,7 @@ export class FileRepository implements IFileRepository {
   }
 
   async findById(uuid: string): Promise<{ status: string } | null> {
+    logger.info(uuid)
     try {
       const file = await FileModel.findOne({ uuid }).exec()
       if (!file) throw new DomainError(FileErrors.FILE_NOT_FOUND, 'File not found')
@@ -55,6 +57,20 @@ export class FileRepository implements IFileRepository {
       )
     }
   }
+
+  async updateStatus(uuid: string, status: FileStatus): Promise<void> {
+    try {
+      const updated = await FileModel.findOneAndUpdate({ uuid }, { status }, { new: true })
+
+      if (!updated) {
+        throw new DomainError(FileErrors.FILE_NOT_FOUND, 'File not found')
+      }
+    } catch (err) {
+      if (err instanceof DomainError) throw err
+      throw new DomainError(FileErrors.DATABASE_ERROR, 'Error updating file status')
+    }
+  }
+
 }
 
 export default FileRepository

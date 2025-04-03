@@ -8,11 +8,13 @@ export function mapDomainErrorToHttp(error: unknown): { statusCode: number; body
         case FileErrors.MISSING_FILE_ID:
         case FileErrors.INVALID_FILE_FORMAT:
         case FileErrors.NO_FILE_UPLOADED:
+        case FileErrors.INVALID_PAGE:
             return { statusCode: 400, body: { error: error.message } }
             
         case FileErrors.NO_API_KEY:
         case FileErrors.INVALID_API_KEY:
             return { statusCode: 403, body: { error: error.message } }
+
 
         case FileErrors.FILE_NOT_FOUND:
             return { statusCode: 404, body: { error: error.message } }
