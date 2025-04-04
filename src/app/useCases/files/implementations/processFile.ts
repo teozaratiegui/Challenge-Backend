@@ -8,7 +8,7 @@ import fs from 'fs'
 import { logger } from "infra/logger/logger"
 
 export class ProcessFileUseCase {
-  private PAGE_SIZE = 500
+  private PAGE_SIZE = 300
 
   constructor(
     private fileRepo: IFileRepository,
@@ -54,13 +54,14 @@ export class ProcessFileUseCase {
 
     for (let i = 1; i <= worksheet.rowCount; i++) {
       const row = worksheet.getRow(i)
-      if (i === 1) continue // header
+      if (i === 1) continue 
+
+      const errors = []
 
       const nameCell = row.getCell(1).value
       const ageCell = row.getCell(2).value
       const numsCell = row.getCell(3).value
 
-      const errors = []
       if (typeof nameCell !== 'string') errors.push({ row: i, col: 1 })
       if (typeof ageCell !== 'number') errors.push({ row: i, col: 2 })
 
@@ -69,8 +70,17 @@ export class ProcessFileUseCase {
         if (!numsCell) throw new Error()
         numsArray = numsCell.toString().split(',').map(n => parseInt(n.trim()))
         if (numsArray.some(isNaN)) throw new Error()
+        numsArray.sort((a, b) => a - b)
       } catch {
         errors.push({ row: i, col: 3 })
+      }
+
+      // Strict column validation (aligned with header)
+      for (let col = 4; col <= row.cellCount; col++) {
+        if (row.getCell(col).value !== null && row.getCell(col).value !== undefined) {
+          errors.push({ row: i, col: 4 })
+          break
+        }
       }
 
       if (errors.length) {

@@ -22,10 +22,17 @@ export class GetFileStatusUseCase implements IFileStatusUseCase {
       const result = await this.errorRepo.findPage(fileId, page)
       const nextPage = await this.errorRepo.findPage(fileId, page + 1)
       logger.info(result)
-      return {
-        status: file.status,
-        errors: result?.fileErrors || [],
-        next:  !!nextPage,
+      if (!result) {
+        return {
+          status: file.status,
+          message: "page not found"
+        }
+      } else {
+        return {
+          status: file.status,
+          errors: result?.fileErrors,
+          next:  !!nextPage,
+        }
       }
     }
 
