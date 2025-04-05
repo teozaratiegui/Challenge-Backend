@@ -1,13 +1,12 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { FileDataUseCase } from 'app/useCases/files/implementations/fileData'
-import { FileErrors } from 'domain/enums/files/fileErrors'
 import { DomainError } from 'domain/entities/domainError'
 
 const mockFileRepo = {
   findById: vi.fn()
 }
 const mockValidRepo = {
-  findPage: vi.fn()
+  findByUuidWithPagination: vi.fn()
 }
 
 describe('FileDataUseCase', () => {
@@ -19,36 +18,49 @@ describe('FileDataUseCase', () => {
   })
 
   it('should throw error if uuid is missing', async () => {
-    await expect(useCase.execute('', 1)).rejects.toThrowError(DomainError)
+    await expect(useCase.execute('', 10, 0)).rejects.toThrowError(DomainError)
   })
 
-  it('should throw error if page is <= 0', async () => {
-    await expect(useCase.execute('uuid', 0)).rejects.toThrowError(DomainError)
+  it('should throw error if limit > 100', async () => {
+    await expect(useCase.execute('uuid', 101, 0)).rejects.toThrowError(DomainError)
   })
 
-  it('should throw if file is not found', async () => {
+  it('should throw error if file not found', async () => {
     mockFileRepo.findById.mockResolvedValueOnce(null)
-    await expect(useCase.execute('uuid', 1)).rejects.toThrowError(DomainError)
+    await expect(useCase.execute('uuid', 10, 0)).rejects.toThrowError(DomainError)
   })
 
   it('should return message if file is pending', async () => {
     mockFileRepo.findById.mockResolvedValueOnce({ status: 'pending' })
-    const res = await useCase.execute('uuid', 1)
+    const res = await useCase.execute('uuid', 10, 0)
     expect(res).toEqual({ message: 'File is yet to be processed' })
   })
 
-  it('should return data and next for done file with next page', async () => {
+  it('should return data, total and hasNext if records exist', async () => {
     mockFileRepo.findById.mockResolvedValueOnce({ status: 'done' })
-    mockValidRepo.findPage.mockResolvedValueOnce({ data: ['row1'] })
-    mockValidRepo.findPage.mockResolvedValueOnce({ data: ['row2'] })
+    mockValidRepo.findByUuidWithPagination.mockResolvedValueOnce({
+      data: [{ name: 'Test', age: 30, nums: [1, 2, 3] }],
+      total: 1,
+      hasNext: false
+    })
 
-    const res = await useCase.execute('uuid', 1)
-    expect(res).toEqual({ data: ['row1'], next: true })
+    const res = await useCase.execute('uuid', 10, 0)
+    expect(res).toEqual({
+      data: [{ name: 'Test', age: 30, nums: [1, 2, 3] }],
+      total: 1,
+      hasNext: false
+    })
   })
 
-  it('should throw if page not found', async () => {
+  it('should return message if no records found', async () => {
     mockFileRepo.findById.mockResolvedValueOnce({ status: 'done' })
-    mockValidRepo.findPage.mockResolvedValueOnce(null)
-    await expect(useCase.execute('uuid', 1)).rejects.toThrowError(DomainError)
+    mockValidRepo.findByUuidWithPagination.mockResolvedValueOnce({
+      data: [],
+      total: 0,
+      hasNext: false
+    })
+
+    const res = await useCase.execute('uuid', 10, 0)
+    expect(res).toEqual({ message: 'No records found for the given limit and offset range.' })
   })
 })

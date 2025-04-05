@@ -1,54 +1,48 @@
+// processFileUseCase.test.ts
 import { describe, it, expect, beforeEach, vi } from 'vitest'
 import { ProcessFileUseCase } from 'app/useCases/files/implementations/processFile'
 import ExcelJS from 'exceljs'
 import path from 'path'
 import fs from 'fs/promises'
-import { QueueFileUseCase } from 'app/useCases/files/implementations/queueFile'
 
 const mockFileRepo = {
-    updateStatus: vi.fn(),
-    create: vi.fn(),
-    findById: vi.fn()
-  }
-  const mockValidRepo = {
-    bulkInsertPages: vi.fn(),
-    findPage: vi.fn(),
-    savePage: vi.fn()
-  }
-  const mockErrorRepo = {
-    bulkInsertPages: vi.fn(),
-    findPage: vi.fn(),
-    savePage: vi.fn()
-  }
+  updateStatus: vi.fn(),
+  create: vi.fn(),
+  findById: vi.fn()
+}
 
-  const mockPublisher = {
-    send: vi.fn()
-  }
+const mockValidRepo = {
+  bulkInsert: vi.fn(),
+  findByUuidWithPagination: vi.fn()
+}
+
+const mockErrorRepo = {
+  bulkInsert: vi.fn(),
+  findByUuidWithPagination: vi.fn()
+}
 
 let useCase: ProcessFileUseCase
 
-describe('ProcessFileUseCase', () => {
-  let useCase: ProcessFileUseCase
+const createWorkbookWithRows = async (rows: any[][]) => {
+  const workbook = new ExcelJS.Workbook()
+  const sheet = workbook.addWorksheet('Sheet1')
+  sheet.addRow(['name', 'age', 'nums'])
+  rows.forEach(r => sheet.addRow(r))
 
+  const filePath = path.join(__dirname, 'testfile.xlsx')
+  await workbook.xlsx.writeFile(filePath)
+  return filePath
+}
+
+describe('ProcessFileUseCase', () => {
   beforeEach(() => {
     vi.clearAllMocks()
     useCase = new ProcessFileUseCase(
-      mockFileRepo,
-      mockValidRepo,
-      mockErrorRepo
+      mockFileRepo as any,
+      mockValidRepo as any,
+      mockErrorRepo as any
     )
   })
-
-  const createWorkbookWithRows = async (rows: any[][]) => {
-    const workbook = new ExcelJS.Workbook()
-    const sheet = workbook.addWorksheet('Sheet1')
-    sheet.addRow(['name', 'age', 'nums'])
-    rows.forEach(r => sheet.addRow(r))
-
-    const filePath = path.join(__dirname, 'testfile.xlsx')
-    await workbook.xlsx.writeFile(filePath)
-    return filePath
-  }
 
   it('should process valid rows correctly', async () => {
     const file = await createWorkbookWithRows([
@@ -57,8 +51,8 @@ describe('ProcessFileUseCase', () => {
 
     await useCase.execute('uuid-1', file)
 
-    expect(mockValidRepo.bulkInsertPages).toHaveBeenCalled()
-    expect(mockErrorRepo.bulkInsertPages).not.toHaveBeenCalled()
+    expect(mockValidRepo.bulkInsert).toHaveBeenCalled()
+    expect(mockErrorRepo.bulkInsert).not.toHaveBeenCalled()
   })
 
   it('should detect all error cases in one row', async () => {
@@ -67,7 +61,7 @@ describe('ProcessFileUseCase', () => {
     ])
 
     await useCase.execute('uuid-errors', file)
-    expect(mockErrorRepo.bulkInsertPages).toHaveBeenCalled()
+    expect(mockErrorRepo.bulkInsert).toHaveBeenCalled()
   })
 
   it('should delete the file after processing', async () => {
@@ -80,7 +74,7 @@ describe('ProcessFileUseCase', () => {
     expect(unlinkSpy).toHaveBeenCalledWith(file)
   })
 
-  it('should store uuid and page correctly with valid data', async () => {
+  it('should store uuid correctly with valid data', async () => {
     const file = await createWorkbookWithRows([
       ['Alice', 30, '3,2,1'],
       ['Bob', 28, '9,5,1']
@@ -88,7 +82,7 @@ describe('ProcessFileUseCase', () => {
 
     await useCase.execute('uuid-xyz', file)
 
-    expect(mockValidRepo.bulkInsertPages).toHaveBeenCalled()
+    expect(mockValidRepo.bulkInsert).toHaveBeenCalled()
   })
 
   it('should not save valid rows when all are invalid', async () => {
@@ -98,9 +92,7 @@ describe('ProcessFileUseCase', () => {
     ])
 
     await useCase.execute('uuid-no-valid', file)
-    expect(mockValidRepo.bulkInsertPages).not.toHaveBeenCalled()
-    expect(mockErrorRepo.bulkInsertPages).toHaveBeenCalled()
+    expect(mockValidRepo.bulkInsert).not.toHaveBeenCalled()
+    expect(mockErrorRepo.bulkInsert).toHaveBeenCalled()
   })
 })
-
-

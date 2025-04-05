@@ -12,14 +12,24 @@ export class GetFileDataPageController implements IController {
 
   async handle(httpRequest: IHttpRequest): Promise<IHttpResponse> {
     const { uuid } = httpRequest.path as { uuid?: string }
-    const { page } = httpRequest.query as { page?: string }
+    const { limit, offset } = httpRequest.query as { limit?: string; offset?: string }
 
-    if (!uuid || !page) {
-      throw new DomainError(FileErrors.MISSING_FILE_ID, 'Missing uuid or page param')
+    if (!uuid || limit === undefined || offset === undefined) {
+      throw new DomainError(FileErrors.MISSING_FILE_ID, 'Missing uuid, limit or offset param')
     }
 
-    const pageNumber = parseInt(page)
-    const result = await this.useCase.execute(uuid, pageNumber)
+    const limitValue = parseInt(limit)
+    const offsetValue = parseInt(offset)
+
+    if (isNaN(limitValue) || isNaN(offsetValue)) {
+      throw new DomainError(FileErrors.INVALID_PAGE, 'Limit and offset must be numbers')
+    }
+
+    if (limitValue > 100) {
+      throw new DomainError(FileErrors.INVALID_PAGE, 'You cannot request more than 100 records')
+    }
+
+    const result = await this.useCase.execute(uuid, limitValue, offsetValue)
     const success = new HttpSuccess().success_200(result)
     return new HttpResponse(success.statusCode, success.body)
   }

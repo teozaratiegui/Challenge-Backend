@@ -45,6 +45,16 @@ export function handleMulterError(middleware: any) {
         )
       }
 
+      // ✅ Nueva validación de archivo vacío
+      if (req.file && req.file.size === 0) {
+        return next(
+          new DomainError(
+            FileErrors.INVALID_FILE_FORMAT,
+            'Uploaded file is empty'
+          )
+        )
+      }
+
       if (err instanceof multer.MulterError) {
         if (err.code === 'LIMIT_UNEXPECTED_FILE') {
           return next(
@@ -66,4 +76,3 @@ export function handleMulterError(middleware: any) {
     })
   }
 }
-

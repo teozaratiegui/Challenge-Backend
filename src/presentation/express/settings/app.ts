@@ -8,6 +8,7 @@ import { DomainError } from 'domain/entities/domainError'
 import { FileErrors } from 'domain/enums/files/fileErrors'
 import { mapDomainErrorToHttp } from 'presentation/http/helpers/errorMapper'
 import { logger } from 'infra/logger/logger'
+import { swaggerUi, swaggerSpec } from 'infra/providers/swagger/swagger'
 
 
 const app = express()
@@ -15,12 +16,13 @@ const app = express()
 const corsOptions: cors.CorsOptions = {
   origin: '*',
 }
+
 app.use(logRequest)
 app.use(cors(corsOptions))
 app.use(express.json())
 app.use(cors());
 app.use(helmet());
-
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 app.use('/files', uploadRoutes)
 
 const errorHandler: ErrorRequestHandler = (err, req, res, _next): void => {

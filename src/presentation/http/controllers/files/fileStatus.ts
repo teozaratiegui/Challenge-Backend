@@ -13,14 +13,26 @@ export class GetFileStatusController implements IController {
 
   async handle(httpRequest: IHttpRequest): Promise<IHttpResponse> {
     const pathParams = httpRequest.path as { id?: string }
-    const queryParams = httpRequest.query as { page?: string }
+    const queryParams = httpRequest.query as { limit?: string; offset?: string }
     const fileId = pathParams?.id
-    const page = queryParams?.page ? parseInt(queryParams.page) : 1
 
-    if (!fileId) throw new DomainError(FileErrors.MISSING_FILE_ID, 'Missing file id parameter')
+    if (!fileId || queryParams.limit === undefined || queryParams.offset === undefined) {
+      throw new DomainError(FileErrors.MISSING_FILE_ID, 'Missing file id, limit or offset parameter')
+    }
 
-    logger.info(`Getting status for file ${fileId} and page ${page}`)
-    const result = await this.useCase.execute(fileId, page)
+    const limit = parseInt(queryParams.limit)
+    const offset = parseInt(queryParams.offset)
+
+    if (isNaN(limit) || isNaN(offset)) {
+      throw new DomainError(FileErrors.INVALID_PAGE, 'Limit and offset must be numbers')
+    }
+
+    if (limit > 100) {
+      throw new DomainError(FileErrors.INVALID_PAGE, 'You cannot request more than 100 records')
+    }
+
+    logger.info(`Getting status for file ${fileId} with limit ${limit} and offset ${offset}`)
+    const result = await this.useCase.execute(fileId, limit, offset)
     const success = new HttpSuccess().success_200(result)
     return new HttpResponse(success.statusCode, success.body)
   }

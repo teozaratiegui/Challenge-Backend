@@ -1390,3 +1390,172 @@
 {"level":"info","message":"[GET] /files/7d277809-7a47-4b81-a2fb-951d01e77c1a?page=20 - 2025-04-05T01:11:39.509Z","timestamp":"2025-04-05T01:11:39.509Z"}
 {"level":"info","message":"Getting status for file 7d277809-7a47-4b81-a2fb-951d01e77c1a and page 20","timestamp":"2025-04-05T01:11:39.511Z"}
 {"level":"info","message":"Getting status for file 123 and page 1","timestamp":"2025-04-05T01:30:34.303Z"}
+{"level":"info","message":"[GET] /api-docs - 2025-04-05T02:09:22.959Z","timestamp":"2025-04-05T02:09:22.974Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-05T02:09:22.996Z","timestamp":"2025-04-05T02:09:22.996Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-05T02:09:23.857Z","timestamp":"2025-04-05T02:09:23.857Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-05T02:09:23.865Z","timestamp":"2025-04-05T02:09:23.865Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-05T02:09:23.869Z","timestamp":"2025-04-05T02:09:23.869Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-05T02:09:23.875Z","timestamp":"2025-04-05T02:09:23.875Z"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-05T02:09:24.553Z","timestamp":"2025-04-05T02:09:24.553Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T02:10:30.685Z","timestamp":"2025-04-05T02:10:30.685Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T02:10:33.719Z","timestamp":"2025-04-05T02:10:33.720Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T02:11:07.645Z","timestamp":"2025-04-05T02:11:07.645Z"}
+{"level":"info","message":"📥 Message received: uuid=4e57e77f-d043-4c98-a09d-4db4d35281a5, path=uploads\\1743819067652-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T02:11:09.013Z"}
+{"level":"info","message":"✅ File 4e57e77f-d043-4c98-a09d-4db4d35281a5 processed and acknowledged","timestamp":"2025-04-05T02:11:34.042Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T02:12:16.471Z","timestamp":"2025-04-05T02:12:16.471Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-05T02:22:49.421Z","timestamp":"2025-04-05T02:22:49.437Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-05T02:22:49.570Z","timestamp":"2025-04-05T02:22:49.570Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-05T02:22:49.577Z","timestamp":"2025-04-05T02:22:49.577Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-05T02:22:49.580Z","timestamp":"2025-04-05T02:22:49.581Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-05T02:22:49.583Z","timestamp":"2025-04-05T02:22:49.583Z"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-05T02:22:50.070Z","timestamp":"2025-04-05T02:22:50.070Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T02:23:02.270Z","timestamp":"2025-04-05T02:23:02.270Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T02:23:18.266Z","timestamp":"2025-04-05T02:23:18.266Z"}
+{"level":"info","message":"📥 Message received: uuid=377c0ed1-490f-4a3f-993f-b99d4296a5fb, path=uploads\\1743819798270-tmpfe9ca7c6.xlsx","timestamp":"2025-04-05T02:23:20.617Z"}
+{"level":"info","message":"✅ File 377c0ed1-490f-4a3f-993f-b99d4296a5fb processed and acknowledged","timestamp":"2025-04-05T02:23:21.524Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb?page=1 - 2025-04-05T02:23:42.965Z","timestamp":"2025-04-05T02:23:42.966Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-05T02:28:06.125Z","timestamp":"2025-04-05T02:28:06.154Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-05T02:28:06.363Z","timestamp":"2025-04-05T02:28:06.363Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-05T02:28:06.370Z","timestamp":"2025-04-05T02:28:06.370Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-05T02:28:06.374Z","timestamp":"2025-04-05T02:28:06.374Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-05T02:28:06.377Z","timestamp":"2025-04-05T02:28:06.377Z"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-05T02:28:06.794Z","timestamp":"2025-04-05T02:28:06.794Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb?page=1 - 2025-04-05T02:28:49.266Z","timestamp":"2025-04-05T02:28:49.266Z"}
+{"level":"info","message":"Getting status for file 377c0ed1-490f-4a3f-993f-b99d4296a5fb and page 1","timestamp":"2025-04-05T02:28:49.268Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb?page=2 - 2025-04-05T02:29:06.583Z","timestamp":"2025-04-05T02:29:06.583Z"}
+{"level":"info","message":"Getting status for file 377c0ed1-490f-4a3f-993f-b99d4296a5fb and page 2","timestamp":"2025-04-05T02:29:06.585Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb?page=3 - 2025-04-05T02:29:12.869Z","timestamp":"2025-04-05T02:29:12.869Z"}
+{"level":"info","message":"Getting status for file 377c0ed1-490f-4a3f-993f-b99d4296a5fb and page 3","timestamp":"2025-04-05T02:29:12.870Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb/data?page=1 - 2025-04-05T02:29:39.770Z","timestamp":"2025-04-05T02:29:39.770Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb/data?page=1 - 2025-04-05T02:29:52.409Z","timestamp":"2025-04-05T02:29:52.409Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb/data?page=60 - 2025-04-05T02:30:11.320Z","timestamp":"2025-04-05T02:30:11.320Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb/data?page=10 - 2025-04-05T02:30:16.149Z","timestamp":"2025-04-05T02:30:16.149Z"}
+{"level":"info","message":"[GET] /files/377c0ed1-490f-4a3f-993f-b99d4296a5fb/data?page=2 - 2025-04-05T02:30:20.650Z","timestamp":"2025-04-05T02:30:20.650Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T02:30:50.191Z","timestamp":"2025-04-05T02:30:50.191Z"}
+{"level":"info","message":"📥 Message received: uuid=0de5fe7d-ab52-4b16-be92-72d24c76027a, path=uploads\\1743820250199-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T02:30:53.168Z"}
+{"level":"info","message":"[GET] /files/0de5fe7d-ab52-4b16-be92-72d24c76027a?page=3 - 2025-04-05T02:31:09.035Z","timestamp":"2025-04-05T02:31:09.035Z"}
+{"level":"info","message":"Getting status for file 0de5fe7d-ab52-4b16-be92-72d24c76027a and page 3","timestamp":"2025-04-05T02:31:09.037Z"}
+{"level":"info","message":"[GET] /files/0de5fe7d-ab52-4b16-be92-72d24c76027a?page=3 - 2025-04-05T02:31:15.389Z","timestamp":"2025-04-05T02:31:15.389Z"}
+{"level":"info","message":"Getting status for file 0de5fe7d-ab52-4b16-be92-72d24c76027a and page 3","timestamp":"2025-04-05T02:31:15.392Z"}
+{"level":"info","message":"✅ File 0de5fe7d-ab52-4b16-be92-72d24c76027a processed and acknowledged","timestamp":"2025-04-05T02:31:32.831Z"}
+{"level":"info","message":"[GET] /files/0de5fe7d-ab52-4b16-be92-72d24c76027a?page=3 - 2025-04-05T02:31:37.076Z","timestamp":"2025-04-05T02:31:37.076Z"}
+{"level":"info","message":"Getting status for file 0de5fe7d-ab52-4b16-be92-72d24c76027a and page 3","timestamp":"2025-04-05T02:31:37.078Z"}
+{"level":"info","message":"[GET] /files/0de5fe7d-ab52-4b16-be92-72d24c76027a?page=3 - 2025-04-05T02:31:37.900Z","timestamp":"2025-04-05T02:31:37.900Z"}
+{"level":"info","message":"Getting status for file 0de5fe7d-ab52-4b16-be92-72d24c76027a and page 3","timestamp":"2025-04-05T02:31:37.903Z"}
+{"level":"info","message":"[GET] /files/0de5fe7d-ab52-4b16-be92-72d24c76027a/data?page=2 - 2025-04-05T02:31:48.982Z","timestamp":"2025-04-05T02:31:48.983Z"}
+{"level":"info","message":"[GET] /files/0de5fe7d-ab52-4b16-be92-72d24c76027a/data?page=2 - 2025-04-05T02:33:52.824Z","timestamp":"2025-04-05T02:33:52.824Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-05T02:34:02.519Z","timestamp":"2025-04-05T02:34:02.520Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-05T02:34:37.381Z","timestamp":"2025-04-05T02:34:37.381Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-05T02:34:37.613Z","timestamp":"2025-04-05T02:34:37.613Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-05T02:34:37.622Z","timestamp":"2025-04-05T02:34:37.622Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-05T02:34:37.623Z","timestamp":"2025-04-05T02:34:37.623Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-05T02:34:37.624Z","timestamp":"2025-04-05T02:34:37.624Z"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-05T02:34:38.156Z","timestamp":"2025-04-05T02:34:38.156Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-05T03:44:57.241Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-05T03:45:00.358Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T03:45:17.356Z","timestamp":"2025-04-05T03:45:17.357Z"}
+{"level":"info","message":"📥 Message received: uuid=cff6ab35-1a6d-468f-af61-da71c0713157, path=uploads\\1743824717366-test_errores_completo.xlsx","timestamp":"2025-04-05T03:45:17.638Z"}
+{"level":"info","message":"✅ File cff6ab35-1a6d-468f-af61-da71c0713157 processed and acknowledged","timestamp":"2025-04-05T03:45:18.299Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?page=1 - 2025-04-05T03:45:34.830Z","timestamp":"2025-04-05T03:45:34.830Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=1&limit=100 - 2025-04-05T03:46:03.581Z","timestamp":"2025-04-05T03:46:03.581Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 1","timestamp":"2025-04-05T03:46:03.582Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157/data?page=2 - 2025-04-05T15:24:59.387Z","timestamp":"2025-04-05T15:24:59.390Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157/data?limit=100&offset=0 - 2025-04-05T15:25:21.495Z","timestamp":"2025-04-05T15:25:21.495Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157/data?limit=100&offset=-1 - 2025-04-05T15:28:21.594Z","timestamp":"2025-04-05T15:28:21.594Z"}
+{"code":2,"codeName":"BadValue","errorLabelSet":{},"errorResponse":{"code":2,"codeName":"BadValue","errmsg":"BSON field 'skip' value must be >= 0, actual value '-1'","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T15:28:21.635Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157/data?limit=100&offset=-1 - 2025-04-05T15:29:55.347Z","timestamp":"2025-04-05T15:29:55.358Z"}
+{"code":2,"codeName":"BadValue","errorLabelSet":{},"errorResponse":{"code":2,"codeName":"BadValue","errmsg":"BSON field 'skip' value must be >= 0, actual value '-1'","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T15:29:55.392Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=1&limit=100 - 2025-04-05T15:32:05.010Z","timestamp":"2025-04-05T15:32:05.019Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 1","timestamp":"2025-04-05T15:32:05.025Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=1&limit=100 - 2025-04-05T15:32:29.392Z","timestamp":"2025-04-05T15:32:29.393Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 1","timestamp":"2025-04-05T15:32:29.398Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=100&limit=100 - 2025-04-05T15:34:03.919Z","timestamp":"2025-04-05T15:34:03.921Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 100","timestamp":"2025-04-05T15:34:03.926Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=0&limit=100 - 2025-04-05T15:34:26.049Z","timestamp":"2025-04-05T15:34:26.049Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 0","timestamp":"2025-04-05T15:34:26.053Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=0&limit=101 - 2025-04-05T15:34:30.221Z","timestamp":"2025-04-05T15:34:30.221Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=100&limit=100 - 2025-04-05T15:34:37.304Z","timestamp":"2025-04-05T15:34:37.304Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 100","timestamp":"2025-04-05T15:34:37.306Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=200&limit=100 - 2025-04-05T15:34:53.397Z","timestamp":"2025-04-05T15:34:53.397Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 200","timestamp":"2025-04-05T15:34:53.398Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=200&limit=100 - 2025-04-05T15:53:18.487Z","timestamp":"2025-04-05T15:53:18.497Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 200","timestamp":"2025-04-05T15:53:18.504Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=200&limit=100 - 2025-04-05T15:53:59.467Z","timestamp":"2025-04-05T15:53:59.468Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 200","timestamp":"2025-04-05T15:53:59.472Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=100&limit=100 - 2025-04-05T15:54:12.863Z","timestamp":"2025-04-05T15:54:12.863Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 100","timestamp":"2025-04-05T15:54:12.864Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=200&limit=100 - 2025-04-05T15:54:18.518Z","timestamp":"2025-04-05T15:54:18.518Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 200","timestamp":"2025-04-05T15:54:18.520Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=0&limit=100 - 2025-04-05T15:54:25.164Z","timestamp":"2025-04-05T15:54:25.164Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset 0","timestamp":"2025-04-05T15:54:25.166Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157/data?limit=100&offset=-1 - 2025-04-05T15:57:50.350Z","timestamp":"2025-04-05T15:57:50.350Z"}
+{"code":2,"codeName":"BadValue","errorLabelSet":{},"errorResponse":{"code":2,"codeName":"BadValue","errmsg":"BSON field 'skip' value must be >= 0, actual value '-1'","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T15:57:50.366Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=-1&limit=100 - 2025-04-05T15:57:59.620Z","timestamp":"2025-04-05T15:57:59.620Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset -1","timestamp":"2025-04-05T15:57:59.621Z"}
+{"code":2,"codeName":"BadValue","errorLabelSet":{},"errorResponse":{"code":2,"codeName":"BadValue","errmsg":"BSON field 'skip' value must be >= 0, actual value '-1'","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T15:57:59.627Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157?offset=-1&limit=100 - 2025-04-05T15:58:24.809Z","timestamp":"2025-04-05T15:58:24.811Z"}
+{"level":"info","message":"Getting status for file cff6ab35-1a6d-468f-af61-da71c0713157 with limit 100 and offset -1","timestamp":"2025-04-05T15:58:24.817Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157/data?limit=100&offset=0 - 2025-04-05T15:58:36.444Z","timestamp":"2025-04-05T15:58:36.444Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157/data?limit=100&offset=0 - 2025-04-05T16:03:13.212Z","timestamp":"2025-04-05T16:03:13.223Z"}
+{"level":"info","message":"[GET] /files/cff6ab35-1a6d-468f-af61-da71c0713157/data?limit=100&offset=0 - 2025-04-05T16:03:39.876Z","timestamp":"2025-04-05T16:03:39.877Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T16:09:09.901Z","timestamp":"2025-04-05T16:09:09.901Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150?offset=-1&limit=100 - 2025-04-05T16:09:22.318Z","timestamp":"2025-04-05T16:09:22.319Z"}
+{"level":"info","message":"Getting status for file 04e70be4-edce-4c6c-9d2f-3da55ddae150 with limit 100 and offset -1","timestamp":"2025-04-05T16:09:22.321Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150?offset=0&limit=100 - 2025-04-05T16:09:27.327Z","timestamp":"2025-04-05T16:09:27.327Z"}
+{"level":"info","message":"Getting status for file 04e70be4-edce-4c6c-9d2f-3da55ddae150 with limit 100 and offset 0","timestamp":"2025-04-05T16:09:27.329Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150/data?limit=100&offset=0 - 2025-04-05T16:09:34.061Z","timestamp":"2025-04-05T16:09:34.061Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-05T16:10:50.020Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-05T16:10:50.213Z"}
+{"level":"info","message":"📥 Message received: uuid=04e70be4-edce-4c6c-9d2f-3da55ddae150, path=uploads\\1743869349913-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T16:10:50.232Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150?offset=0&limit=100 - 2025-04-05T16:11:00.557Z","timestamp":"2025-04-05T16:11:00.557Z"}
+{"level":"info","message":"Getting status for file 04e70be4-edce-4c6c-9d2f-3da55ddae150 with limit 100 and offset 0","timestamp":"2025-04-05T16:11:00.568Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150/data?limit=100&offset=0 - 2025-04-05T16:11:03.720Z","timestamp":"2025-04-05T16:11:03.720Z"}
+{"level":"info","message":"✅ File 04e70be4-edce-4c6c-9d2f-3da55ddae150 processed and acknowledged","timestamp":"2025-04-05T16:11:21.018Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150/data?limit=100&offset=0 - 2025-04-05T16:11:29.098Z","timestamp":"2025-04-05T16:11:29.098Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150/data?limit=110&offset=0 - 2025-04-05T16:13:00.528Z","timestamp":"2025-04-05T16:13:00.528Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150/data?limit=100&offset=198900 - 2025-04-05T16:13:10.941Z","timestamp":"2025-04-05T16:13:10.941Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150/data?limit=100&offset=189900 - 2025-04-05T16:13:24.562Z","timestamp":"2025-04-05T16:13:24.562Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T16:38:04.421Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T16:40:00.764Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-05T18:56:05.203Z","timestamp":"2025-04-05T18:56:05.217Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-05T18:56:06.162Z","timestamp":"2025-04-05T18:56:06.162Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-05T18:56:06.338Z","timestamp":"2025-04-05T18:56:06.338Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-05T18:56:06.342Z","timestamp":"2025-04-05T18:56:06.343Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-05T18:56:06.346Z","timestamp":"2025-04-05T18:56:06.346Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-05T18:56:06.352Z","timestamp":"2025-04-05T18:56:06.352Z"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-05T18:56:06.838Z","timestamp":"2025-04-05T18:56:06.838Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T18:57:16.152Z","timestamp":"2025-04-05T18:57:16.152Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T18:57:25.750Z","timestamp":"2025-04-05T18:57:25.750Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T18:57:38.318Z","timestamp":"2025-04-05T18:57:38.319Z"}
+{"level":"info","message":"[GET] /files/eeb7276d-4346-4967-81fa-62b0a107c2b6?page=1 - 2025-04-05T19:09:39.152Z","timestamp":"2025-04-05T19:09:39.154Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T19:09:39.231Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T19:10:22.568Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:16:21.489Z","timestamp":"2025-04-05T19:16:21.490Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:16:21.557Z","timestamp":"2025-04-05T19:16:21.558Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:19:51.498Z","timestamp":"2025-04-05T19:19:51.499Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:19:51.580Z","timestamp":"2025-04-05T19:19:51.580Z"}
+{"level":"info","message":"📥 Message received: uuid=32d3361e-ed5f-4698-a232-e1473941e40c, path=uploads\\1743880791589-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:19:52.558Z"}
+{"level":"info","message":"📥 Message received: uuid=fdbb8756-ee8c-4d29-9575-e31ef179b17d, path=uploads\\1743880791563-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:19:52.646Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:20:06.948Z","timestamp":"2025-04-05T19:20:06.948Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:20:07.014Z","timestamp":"2025-04-05T19:20:07.014Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T19:20:07.212Z"}
+{"level":"info","message":"📥 Message received: uuid=295d85d1-b723-4d4e-abbc-974c282497c3, path=uploads\\1743880807016-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:20:21.431Z"}
+{"level":"info","message":"📥 Message received: uuid=5f4c5845-920c-430b-8021-f76d101d2063, path=uploads\\1743880806981-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:20:21.445Z"}
+{"level":"info","message":"✅ File fdbb8756-ee8c-4d29-9575-e31ef179b17d processed and acknowledged","timestamp":"2025-04-05T19:20:54.264Z"}
+{"level":"info","message":"✅ File 32d3361e-ed5f-4698-a232-e1473941e40c processed and acknowledged","timestamp":"2025-04-05T19:20:54.275Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T19:21:23.712Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:21:23.677Z","timestamp":"2025-04-05T19:21:23.687Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:21:23.847Z","timestamp":"2025-04-05T19:21:23.847Z"}
+{"level":"info","message":"📥 Message received: uuid=f5576646-8b86-40f2-ae77-88c19f66e4ca, path=uploads\\1743880883855-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:21:34.715Z"}
+{"level":"info","message":"📥 Message received: uuid=98845698-01ea-4e5b-84d7-4c6f8d4be47b, path=uploads\\1743880883829-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:21:34.741Z"}
+{"level":"info","message":"✅ File 5f4c5845-920c-430b-8021-f76d101d2063 processed and acknowledged","timestamp":"2025-04-05T19:21:49.088Z"}
+{"level":"info","message":"✅ File 295d85d1-b723-4d4e-abbc-974c282497c3 processed and acknowledged","timestamp":"2025-04-05T19:21:49.208Z"}
+{"level":"info","message":"✅ File f5576646-8b86-40f2-ae77-88c19f66e4ca processed and acknowledged","timestamp":"2025-04-05T19:22:20.613Z"}
+{"level":"info","message":"✅ File 98845698-01ea-4e5b-84d7-4c6f8d4be47b processed and acknowledged","timestamp":"2025-04-05T19:22:24.984Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-05T19:26:13.936Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-05T19:26:14.408Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T19:26:21.153Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:26:21.254Z","timestamp":"2025-04-05T19:26:21.256Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:26:21.317Z","timestamp":"2025-04-05T19:26:21.317Z"}
+{"level":"info","message":"📥 Message received: uuid=28092ab6-a8ba-4f35-af31-9a4842557d87, path=uploads\\1743881181302-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:26:22.273Z"}
+{"level":"info","message":"📥 Message received: uuid=3b4e3d47-e5ae-431a-bb28-2076dd2bb4fe, path=uploads\\1743881181323-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:26:22.295Z"}

@@ -3,7 +3,6 @@ import { IFileErrorsRepository } from 'app/repositories/iFileErrorsRepository'
 import { IFileStatusUseCase } from 'app/useCases/files/fileStatus'
 import { DomainError } from 'domain/entities/domainError'
 import { FileErrors } from 'domain/enums/files/fileErrors'
-import { logger } from 'infra/logger/logger'
 
 export class GetFileStatusUseCase implements IFileStatusUseCase {
   constructor(
@@ -11,28 +10,37 @@ export class GetFileStatusUseCase implements IFileStatusUseCase {
     private errorRepo: IFileErrorsRepository
   ) {}
 
-  async execute(fileId: string, page: number): Promise<any> {
-    if (page <= 0) throw new DomainError(FileErrors.INVALID_PAGE, 'Invalid page number')
-    const file = await this.fileRepo.findById(fileId)
+  async execute(uuid: string, limit: number, offset: number): Promise<any> {
+    if (limit > 100) {
+      throw new DomainError(FileErrors.INVALID_PAGE, 'You cannot request more than 100 records.')
+    }
+
+    if (offset < 0) {
+      throw new DomainError(FileErrors.INVALID_PAGE, 'Offset must be greater than or equal to 0.')
+    }
+
+    const file = await this.fileRepo.findById(uuid)
     if (!file) {
-      throw new DomainError(FileErrors.FILE_NOT_FOUND, "File not found")
+      throw new DomainError(FileErrors.FILE_NOT_FOUND, 'File not found')
     }
 
     if (file.status === 'done') {
-      const result = await this.errorRepo.findPage(fileId, page)
-      const nextPage = await this.errorRepo.findPage(fileId, page + 1)
-      
-      if (!result) {
+      const { fileErrors: errors, total, hasNext } = await this.errorRepo.findByUuidWithPagination(uuid, limit, offset)
+
+      if (errors.length === 0) {
         return {
           status: file.status,
-          message: "page not found"
+          message: 'No error records found for the given limit and offset range.'
         }
-      } else {
-        return {
-          status: file.status,
-          errors: result?.fileErrors,
-          next:  !!nextPage,
-        }
+      }
+
+      return {
+        status: file.status,
+        hasNext,
+        total,
+        limit,
+        offset,
+        errors
       }
     }
 

@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeAll, afterAll } from 'vitest'
 import mongoose from 'mongoose'
-import ValidRecordRepository from 'infra/repositories/mongodb/fileDataRepository'
+import { FileDataRepository } from 'infra/repositories/mongodb/fileDataRepository'
 
-const repository = new ValidRecordRepository()
+const validRepo = new FileDataRepository()
 
 beforeAll(async () => {
   await mongoose.connect('mongodb://localhost:27017/test', {
@@ -17,30 +17,23 @@ afterAll(async () => {
 })
 
 describe('ValidRecordRepository Integration', () => {
-  it('should save and find a valid page', async () => {
-    const uuid = 'uuid-valid-1'
-    const page = 1
-    const data = [{ name: 'Alice', age: 30, nums: [1, 2, 3] }]
-
-    await repository.savePage(uuid, page, data)
-    const result = await repository.findPage(uuid, page)
-
-    expect(result?.data.map(d => d.toObject())).toEqual(data)
-  })
-
-  it('should bulk insert valid pages', async () => {
-    const pages = [
-      { uuid: 'uuid-valid-bulk', page: 1, data: [{ name: 'Bob', age: 28, nums: [4, 5] }] },
-      { uuid: 'uuid-valid-bulk', page: 2, data: [{ name: 'Carol', age: 25, nums: [6] }] },
+  it('should bulk insert and paginate valid records', async () => {
+    const uuid = 'uuid-valid-bulk'
+    const records = [
+      { uuid, name: 'Alice', age: 30, nums: [1, 2, 3] },
+      { uuid, name: 'Bob', age: 25, nums: [4, 5, 6] },
+      { uuid, name: 'Charlie', age: 40, nums: [7, 8, 9] },
     ]
 
-    await repository.bulkInsertPages(pages)
-    const page1 = await repository.findPage('uuid-valid-bulk', 1)
-    const page2 = await repository.findPage('uuid-valid-bulk', 2)
+    await validRepo.bulkInsert(records)
 
-    
-    expect(page1?.data.map(d => d.toObject())).toEqual(pages[0].data)
+    const { data, total, hasNext } = await validRepo.findByUuidWithPagination(uuid, 2, 0)
 
-    expect(page2?.data.map(d => d.toObject())).toEqual(pages[1].data)
+    expect(data.length).toBe(2)
+    expect(data[0]).toHaveProperty('name')
+    expect(data[0]).toHaveProperty('age')
+    expect(data[0]).toHaveProperty('nums')
+    expect(total).toBe(3)
+    expect(hasNext).toBe(true)
   })
 })

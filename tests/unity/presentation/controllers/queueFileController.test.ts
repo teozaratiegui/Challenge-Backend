@@ -4,7 +4,6 @@ import { QueueFileUseCase } from 'app/useCases/files/implementations/queueFile'
 import { HttpSuccess } from 'presentation/http/helpers/implementations/HttpSuccess'
 import { IHttpRequest } from 'presentation/http/helpers/IHttpRequest'
 import { DomainError } from 'domain/entities/domainError'
-import { FileErrors } from 'domain/enums/files/fileErrors'
 
 describe('UploadXlsxController', () => {
   let useCase: QueueFileUseCase
@@ -21,16 +20,16 @@ describe('UploadXlsxController', () => {
     vi.clearAllMocks()
   })
 
-  it('should return 202 and task id', async () => {
+  it('should return 202 and taskId', async () => {
     const httpRequest: IHttpRequest = {
       file: { path: '/tmp/test.xlsx' }
     } as any
 
-    useCase.execute = vi.fn().mockResolvedValueOnce('uuid-task')
-
+    useCase.execute = vi.fn().mockResolvedValueOnce('task-id')
     const response = await controller.handle(httpRequest)
+
     expect(response.statusCode).toBe(new HttpSuccess().success_202().statusCode)
-    expect(response.body).toEqual({ taskId: 'uuid-task' })
+    expect(response.body).toEqual({ taskId: 'task-id' })
   })
 
   it('should throw error if file is missing', async () => {

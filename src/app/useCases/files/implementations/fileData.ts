@@ -1,42 +1,36 @@
 import { IFileDataRepository } from 'app/repositories/iFileDataRepository'
-import { IFileRepository } from 'app/repositories/iFileRepository';
+import { IFileRepository } from 'app/repositories/iFileRepository'
 import { IFileDataUseCase } from 'app/useCases/files/fileData'
 import { DomainError } from 'domain/entities/domainError'
 import { FileErrors } from 'domain/enums/files/fileErrors'
 
 export class FileDataUseCase implements IFileDataUseCase {
-  constructor(private fileRepository: IFileRepository,private repository: IFileDataRepository) {}
+  constructor(
+    private fileRepository: IFileRepository,
+    private repository: IFileDataRepository
+  ) {}
 
-  async execute(uuid: string, page: number): Promise<{ data: any[]; next: boolean } | { message: string } | null> {
+  async execute(uuid: string, limit: number, offset: number): Promise<any> {
     if (!uuid) throw new DomainError(FileErrors.MISSING_FILE_ID, 'Missing UUID')
-    if (page <= 0) throw new DomainError(FileErrors.INVALID_PAGE, 'Invalid page number')
-    
+    if (limit > 100) throw new DomainError(FileErrors.INVALID_PAGE, 'You cannot request more than 100 records.')
+
     const file = await this.fileRepository.findById(uuid)
-    if (!file) {
-      throw new DomainError(FileErrors.FILE_NOT_FOUND, "File not found")
-    }
+    if (!file) throw new DomainError(FileErrors.FILE_NOT_FOUND, 'File not found')
 
-    if (file.status === 'done') {
-      const currentPage = await this.repository.findPage(uuid, page)
-      if (!currentPage) throw new DomainError(FileErrors.FILE_NOT_FOUND, 'Page not found')
-  
-      const nextPage = await this.repository.findPage(uuid, page + 1)
+    if (file.status !== 'done') {
       return {
-        data: currentPage.data,
-        next: !!nextPage
+        message: file.status === 'pending'
+          ? 'File is yet to be processed'
+          : 'File is still being processed'
       }
-    } else {
-      if (file.status === 'pending') {
-        return {
-          message: 'File is yet to be processed',
-        }
-      } else {
-        return {
-          message: 'File is still being processed',
-        }
-      }
-
     }
-    
+
+    const { data, total, hasNext } = await this.repository.findByUuidWithPagination(uuid, limit, offset)
+
+    if (data.length === 0) {
+      return { message: 'No records found for the given limit and offset range.' }
+    }
+
+    return { total, hasNext, data }
   }
 }

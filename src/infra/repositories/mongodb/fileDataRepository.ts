@@ -5,55 +5,44 @@ import { FileErrors } from 'domain/enums/files/fileErrors'
 import { logger } from 'infra/logger/logger'
 
 const ValidRecordSchema = new mongoose.Schema(
-    {
-      uuid: { type: String, required: true },
-      page: { type: Number, required: true },
-      data: [
-        {
-          _id: false,
-          name: String,
-          age: Number,
-          nums: [Number]
-        }
-      ]
-    },
-    { timestamps: true }
+  {
+    uuid: { type: String, required: true },
+    name: String,
+    age: Number,
+    nums: [Number]
+  },
+  { timestamps: true }
 )
 
 const ValidRecordModel = mongoose.model('ValidRecord', ValidRecordSchema)
 
-export class ValidRecordRepository implements IFileDataRepository {
-
-    async savePage(uuid: string, page: number, data: any[]): Promise<void> {
-        try {
-            const document = new ValidRecordModel({ uuid, page, data })
-            await document.save()
-        } catch (err) {
-            throw new DomainError(
-                FileErrors.DATABASE_ERROR,
-                'Error uploading file'
-            )
-        }
+export class FileDataRepository implements IFileDataRepository {
+  async bulkInsert(records: { uuid: string; name: string; age: number; nums: number[] }[]): Promise<void> {
+    try {
+      await ValidRecordModel.insertMany(records)
+    } catch (err) {
+      logger.error(err)
+      throw new DomainError(FileErrors.DATABASE_ERROR, 'Error bulk inserting valid records')
     }
+  }
 
-    async findPage(uuid: string, page: number): Promise<{ data: any[] } | null> {
-      const doc = await ValidRecordModel.findOne({ uuid, page }).exec()
-      return doc ? { data: doc.data } : null
+  async findByUuidWithPagination(uuid: string, limit: number, offset: number): Promise<{ data: any[]; total: number ; hasNext: boolean }> {
+    try {
+      const data = await ValidRecordModel.find({ uuid })
+        .skip(offset)
+        .limit(limit)
+        .select('name age nums -_id')
+        .lean()
+
+      const total = await ValidRecordModel.countDocuments({ uuid })
+      const hasNext = offset + limit < total
+
+      return { data, total, hasNext }
+    } catch (err) {
+      logger.error(err)
+      throw new DomainError(FileErrors.DATABASE_ERROR, 'Error fetching valid records')
     }
-
-    async bulkInsertPages(pages: { uuid: string, page: number, data: any[] }[]): Promise<void> {
-      try {
-        await ValidRecordModel.insertMany(pages)
-      } catch (err) {
-        logger.error(err)
-        throw new DomainError(
-          FileErrors.DATABASE_ERROR,
-          'Error bulk inserting pages'
-        )
-      }
-    }
-
+  }
 }
 
-export default ValidRecordRepository
-
+export default FileDataRepository 

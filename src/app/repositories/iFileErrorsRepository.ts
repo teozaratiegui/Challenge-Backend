@@ -1,7 +1,4 @@
 export interface IFileErrorsRepository {
-
-    savePage(uuid: string, page: number, fileErrors: any[]): Promise<void>
-    findPage(uuid: string, page: number): Promise<{ fileErrors: any[] } | null>
-    bulkInsertPages(pages: { uuid: string, page: number, fileErrors: any[] }[]): Promise<void>
-    
-}
+    bulkInsert(uuid: string, fileErrors: { row: number; col: number }[]): Promise<void>
+    findByUuidWithPagination(uuid: string, limit: number, offset: number): Promise<{ fileErrors: any[]; total: number; hasNext: boolean }>
+  }

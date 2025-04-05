@@ -1,6 +1,4 @@
 export interface IFileDataRepository {
-
-    savePage(uuid: string, page: number, errors: any[]): Promise<void>
-    findPage(uuid: string, page: number): Promise<{ data: any[] } | null>
-    bulkInsertPages(pages: { uuid: string, page: number, data: any[] }[]): Promise<void>
-}
+    bulkInsert(records: { uuid: string; name: string; age: number; nums: number[] }[]): Promise<void>
+    findByUuidWithPagination(uuid: string, limit: number, offset: number): Promise<{ data: any[]; total: number; hasNext: boolean }>
+  }
