@@ -43,6 +43,15 @@ export class FileErrorsRepository implements IFileErrorsRepository {
       throw new DomainError(FileErrors.DATABASE_ERROR, 'Error fetching error records')
     }
   }
+
+  async deleteMany(): Promise<void> {
+    try {
+      await ErrorRecordModel.deleteMany({})
+    } catch (err) {
+      logger.error(err)
+      throw new DomainError(FileErrors.DATABASE_ERROR, 'Error deleting valid records')
+    }
+  }
 }
 
 export default FileErrorsRepository 

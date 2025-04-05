@@ -11,8 +11,11 @@ beforeAll(async () => {
   } as any)
 })
 
+beforeEach(async () => {
+  await validRepo.deleteMany()
+})
+
 afterAll(async () => {
-  await mongoose.connection.dropDatabase()
   await mongoose.disconnect()
 })
 

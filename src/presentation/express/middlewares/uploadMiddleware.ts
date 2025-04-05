@@ -3,6 +3,9 @@ import path from 'path'
 import { DomainError } from 'domain/entities/domainError'
 import { FileErrors } from 'domain/enums/files/fileErrors'
 import { logger } from 'infra/logger/logger'
+import ExcelJS from 'exceljs'
+import fs from 'fs/promises' // importante: usamos fs.promises
+
 
 const storage = multer.diskStorage({
   destination: './uploads',
@@ -34,8 +37,8 @@ const fileFilter = (req: any, file: Express.Multer.File, cb: any) => {
 export const upload = multer({ storage, fileFilter })
 
 export function handleMulterError(middleware: any) {
-  return (req: any, res: any, next: any) => {
-    middleware(req, res, (err: any) => {
+  return async (req: any, res: any, next: any) => {
+    middleware(req, res, async (err: any) => {
       if (!req.file && !err) {
         return next(
           new DomainError(
@@ -45,7 +48,6 @@ export function handleMulterError(middleware: any) {
         )
       }
 
-      // ✅ Nueva validación de archivo vacío
       if (req.file && req.file.size === 0) {
         return next(
           new DomainError(
@@ -72,7 +74,48 @@ export function handleMulterError(middleware: any) {
         return next(err)
       }
 
-      next(err)
+      // ✅ Validar headers del archivo Excel
+      if (req.file) {
+        try {
+          const workbook = new ExcelJS.Workbook()
+          await workbook.xlsx.readFile(req.file.path)
+          const headerRow = workbook.worksheets[0].getRow(1)
+
+          if (!Array.isArray(headerRow.values)) {
+            await fs.unlink(req.file.path)
+            return next(
+              new DomainError(
+                FileErrors.INVALID_FILE_FORMAT,
+                'Header is not in the expected format'
+              )
+            )
+          }
+
+          const actualHeaders = headerRow.values.slice(1, 4).map(cell => cell?.toString().toLowerCase())
+          const expectedHeaders = ['name', 'age', 'nums']
+          const headersValid = expectedHeaders.every((header, index) => actualHeaders[index] === header)
+
+          if (!headersValid) {
+            await fs.unlink(req.file.path)
+            return next(
+              new DomainError(
+                FileErrors.INVALID_FILE_FORMAT,
+                'The file does not contain the required headers: name, age, nums'
+              )
+            )
+          }
+        } catch (e) {
+          await fs.unlink(req.file.path)
+          return next(
+            new DomainError(
+              FileErrors.INVALID_FILE_FORMAT,
+              'Could not parse uploaded file'
+            )
+          )
+        }
+      }
+
+      next()
     })
   }
 }

@@ -37,20 +37,28 @@ describe('FileDataUseCase', () => {
   })
 
   it('should return data, total and hasNext if records exist', async () => {
+    const mockLimit = 10
+    const mockOffset = 0
+  
     mockFileRepo.findById.mockResolvedValueOnce({ status: 'done' })
     mockValidRepo.findByUuidWithPagination.mockResolvedValueOnce({
       data: [{ name: 'Test', age: 30, nums: [1, 2, 3] }],
       total: 1,
-      hasNext: false
+      hasNext: false,
+      limit: mockLimit,
+      offset: mockOffset
     })
-
-    const res = await useCase.execute('uuid', 10, 0)
+  
+    const res = await useCase.execute('uuid', mockLimit, mockOffset)
     expect(res).toEqual({
       data: [{ name: 'Test', age: 30, nums: [1, 2, 3] }],
       total: 1,
-      hasNext: false
+      hasNext: false,
+      limit: mockLimit,
+      offset: mockOffset
     })
   })
+  
 
   it('should return message if no records found', async () => {
     mockFileRepo.findById.mockResolvedValueOnce({ status: 'done' })

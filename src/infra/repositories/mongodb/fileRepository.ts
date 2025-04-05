@@ -70,6 +70,15 @@ export class FileRepository implements IFileRepository {
     }
   }
 
+  async deleteMany(): Promise<void> {
+    try {
+      await FileModel.deleteMany({})
+    } catch (err) {
+      logger.error(err)
+      throw new DomainError(FileErrors.DATABASE_ERROR, 'Error deleting files')
+    }
+  }
+
 }
 
 export default FileRepository

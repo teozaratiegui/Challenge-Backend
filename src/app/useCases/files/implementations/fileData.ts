@@ -12,7 +12,8 @@ export class FileDataUseCase implements IFileDataUseCase {
 
   async execute(uuid: string, limit: number, offset: number): Promise<any> {
     if (!uuid) throw new DomainError(FileErrors.MISSING_FILE_ID, 'Missing UUID')
-    if (limit > 100) throw new DomainError(FileErrors.INVALID_PAGE, 'You cannot request more than 100 records.')
+    if (limit > 100) { throw new DomainError(FileErrors.INVALID_PAGE, 'You cannot request more than 100 records.') } 
+    if (limit == 0) { throw new DomainError(FileErrors.INVALID_PAGE, 'Limit must be greater than 0.') }
 
     const file = await this.fileRepository.findById(uuid)
     if (!file) throw new DomainError(FileErrors.FILE_NOT_FOUND, 'File not found')
@@ -31,6 +32,6 @@ export class FileDataUseCase implements IFileDataUseCase {
       return { message: 'No records found for the given limit and offset range.' }
     }
 
-    return { total, hasNext, data }
+    return { total, hasNext, offset, limit, data }
   }
 }

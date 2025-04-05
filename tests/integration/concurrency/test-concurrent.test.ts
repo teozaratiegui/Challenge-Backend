@@ -20,7 +20,7 @@ const sendFile = async (filePath: string) => {
 
 describe('Upload heavy xlsx file concurrently', () => {
   it('should handle two concurrent heavy file uploads', async () => {
-    const heavyFilePath = path.resolve(__dirname, 'archivo_200mil_filas.xlsx')
+    const heavyFilePath = path.resolve(__dirname, 'test_200k_lines_with_5000nums_and_errors.xlsx')
 
     console.time('Concurrent Uploads')
 
@@ -28,8 +28,6 @@ describe('Upload heavy xlsx file concurrently', () => {
     const request2 = sendFile(heavyFilePath)
 
     const [res1, res2] = await Promise.allSettled([request1, request2])
-    console.log('Response 1:', res1)
-    console.log('Response 2:', res2)
     console.timeEnd('Concurrent Uploads')
 
     expect(res1.status).toBe('fulfilled')

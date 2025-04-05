@@ -1559,3 +1559,92 @@
 {"level":"info","message":"[POST] /files - 2025-04-05T19:26:21.317Z","timestamp":"2025-04-05T19:26:21.317Z"}
 {"level":"info","message":"📥 Message received: uuid=28092ab6-a8ba-4f35-af31-9a4842557d87, path=uploads\\1743881181302-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:26:22.273Z"}
 {"level":"info","message":"📥 Message received: uuid=3b4e3d47-e5ae-431a-bb28-2076dd2bb4fe, path=uploads\\1743881181323-archivo_200mil_filas.xlsx","timestamp":"2025-04-05T19:26:22.295Z"}
+{"level":"info","message":"✅ File 28092ab6-a8ba-4f35-af31-9a4842557d87 processed and acknowledged","timestamp":"2025-04-05T19:27:03.799Z"}
+{"level":"info","message":"✅ File 3b4e3d47-e5ae-431a-bb28-2076dd2bb4fe processed and acknowledged","timestamp":"2025-04-05T19:27:03.846Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T19:51:25.832Z","timestamp":"2025-04-05T19:51:25.838Z"}
+{"level":"info","message":"📥 Message received: uuid=e95b22c9-cef6-4359-8f2f-f79937416fd4, path=uploads\\1743882685933-test_errores_completo.xlsx","timestamp":"2025-04-05T19:51:26.870Z"}
+{"level":"info","message":"✅ File e95b22c9-cef6-4359-8f2f-f79937416fd4 processed and acknowledged","timestamp":"2025-04-05T19:51:27.706Z"}
+{"level":"info","message":"[GET] /files/e95b22c9-cef6-4359-8f2f-f79937416fd4?limit=100&offset=0 - 2025-04-05T19:51:48.487Z","timestamp":"2025-04-05T19:51:48.487Z"}
+{"level":"info","message":"Getting status for file e95b22c9-cef6-4359-8f2f-f79937416fd4 with limit 100 and offset 0","timestamp":"2025-04-05T19:51:48.490Z"}
+{"level":"info","message":"[GET] /files/e95b22c9-cef6-4359-8f2f-f79937416fd4/data?limit=0&offset=100 - 2025-04-05T19:52:19.654Z","timestamp":"2025-04-05T19:52:19.654Z"}
+{"level":"info","message":"[GET] /files/e95b22c9-cef6-4359-8f2f-f79937416fd4/data?limit=0&offset=100 - 2025-04-05T19:53:25.128Z","timestamp":"2025-04-05T19:53:25.139Z"}
+{"level":"info","message":"[GET] /files/e95b22c9-cef6-4359-8f2f-f79937416fd4/data?limit=0&offset=100 - 2025-04-05T19:53:58.321Z","timestamp":"2025-04-05T19:53:58.321Z"}
+{"level":"info","message":"[GET] /files/e95b22c9-cef6-4359-8f2f-f79937416fd4/data?limit=0&offset=100 - 2025-04-05T19:54:52.951Z","timestamp":"2025-04-05T19:54:52.953Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-05T19:56:49.950Z","timestamp":"2025-04-05T19:56:49.952Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-05T19:56:50.305Z","timestamp":"2025-04-05T19:56:50.305Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-05T19:56:50.314Z","timestamp":"2025-04-05T19:56:50.314Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-05T19:56:50.317Z","timestamp":"2025-04-05T19:56:50.317Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-05T19:56:50.320Z","timestamp":"2025-04-05T19:56:50.320Z"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-05T19:56:51.056Z","timestamp":"2025-04-05T19:56:51.056Z"}
+{"level":"info","message":"[GET] /files/e95b22c9-cef6-4359-8f2f-f79937416fd4/data?limit=0&offset=100 - 2025-04-05T19:57:15.987Z","timestamp":"2025-04-05T19:57:15.987Z"}
+{"level":"info","message":"[GET] /files/e95b22c9-cef6-4359-8f2f-f79937416fd4/data?limit=0&offset=100 - 2025-04-05T19:57:42.173Z","timestamp":"2025-04-05T19:57:42.182Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T20:08:54.332Z","timestamp":"2025-04-05T20:08:54.343Z"}
+{"level":"info","message":"📥 Message received: uuid=2caa63a2-420c-44ff-97fd-7dfa86ff3775, path=uploads\\1743883734353-test_invalid_header_100_rows.xlsx","timestamp":"2025-04-05T20:08:55.009Z"}
+{"level":"info","message":"✅ File 2caa63a2-420c-44ff-97fd-7dfa86ff3775 processed and acknowledged","timestamp":"2025-04-05T20:08:55.292Z"}
+{"level":"info","message":"[GET] /files/2caa63a2-420c-44ff-97fd-7dfa86ff3775?limit=100&offset=0 - 2025-04-05T20:19:15.685Z","timestamp":"2025-04-05T20:19:15.686Z"}
+{"level":"info","message":"Getting status for file 2caa63a2-420c-44ff-97fd-7dfa86ff3775 with limit 100 and offset 0","timestamp":"2025-04-05T20:19:15.710Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T20:28:49.666Z"}
+{"code":175,"codeName":"QueryPlanKilled","errorLabelSet":{},"errorResponse":{"code":175,"codeName":"QueryPlanKilled","errmsg":"PlanExecutor error during aggregation :: caused by :: collection dropped. UUID 06c9c9a4-6201-4b79-ae58-323b63687aa1","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T20:28:50.642Z"}
+{"code":175,"codeName":"QueryPlanKilled","errorLabelSet":{},"errorResponse":{"code":175,"codeName":"QueryPlanKilled","errmsg":"PlanExecutor error during aggregation :: caused by :: collection dropped. UUID 86ca977e-3ca5-4a1e-b8ee-bbd271172719","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T20:28:50.645Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T20:32:17.155Z","timestamp":"2025-04-05T20:32:17.167Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-05T20:33:26.238Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-05T20:33:26.906Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T20:33:45.225Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T20:35:26.542Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T20:35:26.554Z","timestamp":"2025-04-05T20:35:26.554Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T20:35:26.586Z","timestamp":"2025-04-05T20:35:26.586Z"}
+{"level":"info","message":"📥 Message received: uuid=e34649c0-e403-44af-b84d-40dae0ac103b, path=uploads\\1743885326581-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T20:35:40.588Z"}
+{"level":"info","message":"📥 Message received: uuid=b76cbb8f-31aa-4f7f-b2d1-fb65eb2ebb68, path=uploads\\1743885326594-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T20:35:40.729Z"}
+{"level":"info","message":"✅ File b76cbb8f-31aa-4f7f-b2d1-fb65eb2ebb68 processed and acknowledged","timestamp":"2025-04-05T20:37:56.136Z"}
+{"level":"info","message":"✅ File e34649c0-e403-44af-b84d-40dae0ac103b processed and acknowledged","timestamp":"2025-04-05T20:37:56.538Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T20:39:40.164Z","timestamp":"2025-04-05T20:39:40.176Z"}
+{"level":"info","message":"📥 Message received: uuid=5b7a8726-0009-4ae4-b5eb-9f2e83135265, path=uploads\\1743885580185-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T20:39:47.939Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265?offset=0&limit=100 - 2025-04-05T20:39:58.870Z","timestamp":"2025-04-05T20:39:58.873Z"}
+{"level":"info","message":"Getting status for file 5b7a8726-0009-4ae4-b5eb-9f2e83135265 with limit 100 and offset 0","timestamp":"2025-04-05T20:39:58.880Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265?offset=0&limit=100 - 2025-04-05T20:40:05.120Z","timestamp":"2025-04-05T20:40:05.120Z"}
+{"level":"info","message":"Getting status for file 5b7a8726-0009-4ae4-b5eb-9f2e83135265 with limit 100 and offset 0","timestamp":"2025-04-05T20:40:05.122Z"}
+{"level":"info","message":"✅ File 5b7a8726-0009-4ae4-b5eb-9f2e83135265 processed and acknowledged","timestamp":"2025-04-05T20:40:11.364Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265?offset=0&limit=100 - 2025-04-05T20:40:32.198Z","timestamp":"2025-04-05T20:40:32.198Z"}
+{"level":"info","message":"Getting status for file 5b7a8726-0009-4ae4-b5eb-9f2e83135265 with limit 100 and offset 0","timestamp":"2025-04-05T20:40:32.200Z"}
+{"level":"info","message":"[GET] /files/04e70be4-edce-4c6c-9d2f-3da55ddae150/data?limit=100&offset=189900 - 2025-04-05T20:41:08.651Z","timestamp":"2025-04-05T20:41:08.651Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265/data?limit=100&offset=9900 - 2025-04-05T20:41:33.838Z","timestamp":"2025-04-05T20:41:33.838Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T20:41:59.434Z","timestamp":"2025-04-05T20:41:59.434Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265?offset=0&limit=101 - 2025-04-05T20:43:39.079Z","timestamp":"2025-04-05T20:43:39.079Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265?offset=-10&limit=100 - 2025-04-05T20:43:52.426Z","timestamp":"2025-04-05T20:43:52.426Z"}
+{"level":"info","message":"Getting status for file 5b7a8726-0009-4ae4-b5eb-9f2e83135265 with limit 100 and offset -10","timestamp":"2025-04-05T20:43:52.427Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265?offset=0&limit=100 - 2025-04-05T20:43:58.294Z","timestamp":"2025-04-05T20:43:58.294Z"}
+{"level":"info","message":"Getting status for file 5b7a8726-0009-4ae4-b5eb-9f2e83135265 with limit 100 and offset 0","timestamp":"2025-04-05T20:43:58.296Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265/data?limit=100&offset=9900 - 2025-04-05T20:44:58.668Z","timestamp":"2025-04-05T20:44:58.669Z"}
+{"level":"info","message":"[GET] /files/5b7a8726-0009-4ae4-b5eb-9f2e83135265/data?limit=100&offset=9900 - 2025-04-05T20:45:02.331Z","timestamp":"2025-04-05T20:45:02.331Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T20:45:29.814Z","timestamp":"2025-04-05T20:45:29.814Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T20:45:29.819Z","timestamp":"2025-04-05T20:45:29.819Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T20:45:29.888Z"}
+{"code":175,"codeName":"QueryPlanKilled","errorLabelSet":{},"errorResponse":{"code":175,"codeName":"QueryPlanKilled","errmsg":"PlanExecutor error during aggregation :: caused by :: collection dropped. UUID aa195516-7625-423b-83b1-90c8030b00ef","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T20:45:31.077Z"}
+{"code":175,"codeName":"QueryPlanKilled","errorLabelSet":{},"errorResponse":{"code":175,"codeName":"QueryPlanKilled","errmsg":"PlanExecutor error during aggregation :: caused by :: collection dropped. UUID f5944ce4-58ae-4c9c-bece-4e7dc39fd2a7","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T20:45:31.080Z"}
+{"level":"info","message":"📥 Message received: uuid=6b73b288-6b25-4734-b6c5-dc4a7eb6fe5b, path=uploads\\1743885929817-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T20:45:41.200Z"}
+{"level":"info","message":"📥 Message received: uuid=2b54452f-be8d-4b72-a493-ec43956fa548, path=uploads\\1743885929822-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T20:45:41.309Z"}
+{"level":"info","message":"✅ File 2b54452f-be8d-4b72-a493-ec43956fa548 processed and acknowledged","timestamp":"2025-04-05T20:46:35.356Z"}
+{"level":"info","message":"✅ File 6b73b288-6b25-4734-b6c5-dc4a7eb6fe5b processed and acknowledged","timestamp":"2025-04-05T20:46:35.365Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T21:00:31.016Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T21:00:31.060Z","timestamp":"2025-04-05T21:00:31.062Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T21:00:31.082Z","timestamp":"2025-04-05T21:00:31.082Z"}
+{"code":175,"codeName":"QueryPlanKilled","errorLabelSet":{},"errorResponse":{"code":175,"codeName":"QueryPlanKilled","errmsg":"PlanExecutor error during aggregation :: caused by :: collection dropped. UUID bd553a5b-3f16-48ff-a91b-e093c6bd432b","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T21:00:33.301Z"}
+{"code":175,"codeName":"QueryPlanKilled","errorLabelSet":{},"errorResponse":{"code":175,"codeName":"QueryPlanKilled","errmsg":"PlanExecutor error during aggregation :: caused by :: collection dropped. UUID b507d50e-f673-47ed-829f-5ce32225b61f","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T21:00:33.305Z"}
+{"level":"info","message":"📥 Message received: uuid=b077f31a-0c56-4eef-8636-13d432d41aa1, path=uploads\\1743886831078-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T21:00:45.122Z"}
+{"level":"info","message":"📥 Message received: uuid=b54c31f1-2c86-45f2-a2b6-45f842fb83f0, path=uploads\\1743886831086-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T21:00:45.275Z"}
+{"level":"info","message":"✅ File b54c31f1-2c86-45f2-a2b6-45f842fb83f0 processed and acknowledged","timestamp":"2025-04-05T21:03:18.663Z"}
+{"level":"info","message":"✅ File b077f31a-0c56-4eef-8636-13d432d41aa1 processed and acknowledged","timestamp":"2025-04-05T21:03:18.717Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-05T21:07:46.072Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-05T21:07:46.792Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T21:07:53.556Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T21:07:53.938Z","timestamp":"2025-04-05T21:07:53.949Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T21:07:54.073Z","timestamp":"2025-04-05T21:07:54.073Z"}
+{"code":175,"codeName":"QueryPlanKilled","errorLabelSet":{},"errorResponse":{"code":175,"codeName":"QueryPlanKilled","errmsg":"PlanExecutor error during aggregation :: caused by :: collection dropped. UUID 6947d690-f2e5-4edb-a0e4-6830c806cbc8","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T21:07:54.802Z"}
+{"code":175,"codeName":"QueryPlanKilled","errorLabelSet":{},"errorResponse":{"code":175,"codeName":"QueryPlanKilled","errmsg":"PlanExecutor error during aggregation :: caused by :: collection dropped. UUID 3d627115-a0df-495b-a88f-e9356c68cfac","ok":0},"level":"error","ok":0,"timestamp":"2025-04-05T21:07:54.807Z"}
+{"level":"info","message":"📥 Message received: uuid=6de47bde-21c7-42fc-9941-3348867c1496, path=uploads\\1743887274082-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T21:08:03.227Z"}
+{"level":"info","message":"📥 Message received: uuid=b4ffe0a5-0f32-4478-8f66-2ff6c340d698, path=uploads\\1743887274053-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-05T21:08:04.935Z"}
+{"level":"info","message":"✅ File 6de47bde-21c7-42fc-9941-3348867c1496 processed and acknowledged","timestamp":"2025-04-05T21:08:50.663Z"}
+{"level":"info","message":"✅ File b4ffe0a5-0f32-4478-8f66-2ff6c340d698 processed and acknowledged","timestamp":"2025-04-05T21:09:01.142Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-05T21:12:15.658Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T21:12:15.696Z","timestamp":"2025-04-05T21:12:15.699Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T21:12:15.718Z","timestamp":"2025-04-05T21:12:15.718Z"}

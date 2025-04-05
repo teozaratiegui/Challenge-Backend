@@ -43,6 +43,15 @@ export class FileDataRepository implements IFileDataRepository {
       throw new DomainError(FileErrors.DATABASE_ERROR, 'Error fetching valid records')
     }
   }
+
+  async deleteMany(): Promise<void> {
+    try {
+      await ValidRecordModel.deleteMany({})
+    } catch (err) {
+      logger.error(err)
+      throw new DomainError(FileErrors.DATABASE_ERROR, 'Error deleting valid records')
+    }
+  }
 }
 
 export default FileDataRepository 

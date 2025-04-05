@@ -3,6 +3,8 @@ import { FileRepository } from 'infra/repositories/mongodb/fileRepository'
 import mongoose from 'mongoose'
 import { logger } from 'infra/logger/logger'
 
+const repository = new FileRepository()
+
 beforeAll(async () => {
   await mongoose.connect('mongodb://localhost:27017/test', {
     useNewUrlParser: true,
@@ -10,13 +12,16 @@ beforeAll(async () => {
   } as any)
 })
 
+beforeEach(async () => {
+  await repository.deleteMany()
+})
+
 afterAll(async () => {
-  await mongoose.connection.dropDatabase()
   await mongoose.disconnect()
 })
 
 describe('FileRepository Integration', () => {
-  const repository = new FileRepository()
+  
 
 
   it('should create and find a file', async () => {

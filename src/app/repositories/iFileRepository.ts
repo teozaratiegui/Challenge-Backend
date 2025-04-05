@@ -4,5 +4,7 @@ export interface IFileRepository {
     findById(id: string): Promise< any | null>
 
     updateStatus(id: string, status: string): Promise<void>
+
+    deleteMany(): Promise<void>
     
 }
