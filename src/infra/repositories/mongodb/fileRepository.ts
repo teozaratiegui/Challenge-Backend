@@ -41,13 +41,12 @@ export class FileRepository implements IFileRepository {
     }
   }
 
-  async findById(uuid: string): Promise<{ status: string } | null> {
-    logger.info(uuid)
+  async findById(uuid: string): Promise< any | null> {
     try {
       const file = await FileModel.findOne({ uuid }).exec()
       if (!file) throw new DomainError(FileErrors.FILE_NOT_FOUND, 'File not found')
 
-      return { status: file.status }
+      return file 
     } catch (err) {
       if (err instanceof DomainError) throw err
 

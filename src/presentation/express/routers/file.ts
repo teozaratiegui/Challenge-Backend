@@ -50,4 +50,17 @@ uploadRoutes.get(
     }
   )
 
+  uploadRoutes.all('/', (req, res) => {
+    res.status(405).json({ error: `Method ${req.method} not allowed on /` })
+  })
+
+  uploadRoutes.all('/:id', (req, res) => {
+    res.status(405).json({ error: `Method ${req.method} not allowed on /:id` })
+  })
+
+  uploadRoutes.all('/:uuid/data', (req, res) => {
+    res.status(405).json({ error: `Method ${req.method} not allowed on /:uuid/data` })
+  })
+
+
 export { uploadRoutes }

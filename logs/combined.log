@@ -1291,3 +1291,102 @@
 {"level":"info","message":{"fileErrors":["err"]},"timestamp":"2025-04-04T14:15:59.541Z"}
 {"level":"info","message":{"fileErrors":["err"]},"timestamp":"2025-04-04T14:21:31.996Z"}
 {"level":"info","message":{"fileErrors":["err"]},"timestamp":"2025-04-04T14:23:01.172Z"}
+{"level":"info","message":"af79c146-5328-41a1-92e8-930bb801eddd","timestamp":"2025-04-04T23:31:19.955Z"}
+{"level":"info","message":"9d815e7d-82c4-416e-84e3-ac328c7778a9","timestamp":"2025-04-04T23:34:22.539Z"}
+{"level":"info","message":{"file":{"__v":0,"_id":"67f06c7ed21e80ad959abcd9","createdAt":"2025-04-04T23:34:22.389Z","filePath":"some/path","status":"pending","updatedAt":"2025-04-04T23:34:22.389Z","uuid":"9d815e7d-82c4-416e-84e3-ac328c7778a9"}},"timestamp":"2025-04-04T23:34:22.597Z"}
+{"level":"info","message":"c3431e8c-af10-471a-aeb4-1ce532e008c6","timestamp":"2025-04-04T23:38:50.056Z"}
+{"level":"info","message":"[GET] /files/2061894d-7ab0-4a12-bb44-5e24862bcb01?page=1 - 2025-04-04T23:42:08.639Z","timestamp":"2025-04-04T23:42:08.674Z"}
+{"level":"info","message":"Getting status for file 2061894d-7ab0-4a12-bb44-5e24862bcb01 and page 1","timestamp":"2025-04-04T23:42:08.751Z"}
+{"level":"info","message":"2061894d-7ab0-4a12-bb44-5e24862bcb01","timestamp":"2025-04-04T23:42:08.754Z"}
+{"level":"info","message":"[POST] /files - 2025-04-04T23:52:09.907Z","timestamp":"2025-04-04T23:52:09.918Z"}
+{"level":"info","message":"📥 Message received: uuid=c9174fc8-3a6c-44ae-a07e-1ead49af0f0c, path=uploads\\1743810730255-tmpkiksj2ui.xlsx","timestamp":"2025-04-04T23:52:12.352Z"}
+{"level":"info","message":"[PUT] /files - 2025-04-04T23:52:34.247Z","timestamp":"2025-04-04T23:52:34.247Z"}
+{"level":"info","message":"✅ File c9174fc8-3a6c-44ae-a07e-1ead49af0f0c processed and acknowledged","timestamp":"2025-04-04T23:52:37.057Z"}
+{"level":"info","message":"[POST] /files - 2025-04-04T23:53:14.722Z","timestamp":"2025-04-04T23:53:14.722Z"}
+{"level":"info","message":"[POST] /files - 2025-04-04T23:53:20.577Z","timestamp":"2025-04-04T23:53:20.577Z"}
+{"level":"info","message":"[POST] /files - 2025-04-04T23:53:40.445Z","timestamp":"2025-04-04T23:53:40.446Z"}
+{"level":"info","message":"[POST] /files - 2025-04-04T23:53:55.022Z","timestamp":"2025-04-04T23:53:55.022Z"}
+{"level":"info","message":"📥 Message received: uuid=d940a4d2-3f91-42ed-ac9c-6dc125f24da8, path=uploads\\1743810835029-tmpkiksj2ui.xlsx","timestamp":"2025-04-04T23:53:55.965Z"}
+{"level":"info","message":"[POST] /files - 2025-04-04T23:53:59.755Z","timestamp":"2025-04-04T23:53:59.755Z"}
+{"level":"info","message":"📥 Message received: uuid=717a0704-871f-413e-b723-6b99e2d7f42b, path=uploads\\1743810839759-tmpkiksj2ui.xlsx","timestamp":"2025-04-04T23:54:10.310Z"}
+{"level":"info","message":"✅ File d940a4d2-3f91-42ed-ac9c-6dc125f24da8 processed and acknowledged","timestamp":"2025-04-04T23:54:29.537Z"}
+{"level":"info","message":"✅ File 717a0704-871f-413e-b723-6b99e2d7f42b processed and acknowledged","timestamp":"2025-04-04T23:54:33.304Z"}
+{"level":"info","message":"[GET] /files/717a0704-871f-413e-b723-6b99e2d7f42b?page=1 - 2025-04-04T23:54:33.526Z","timestamp":"2025-04-04T23:54:33.526Z"}
+{"level":"info","message":"Getting status for file 717a0704-871f-413e-b723-6b99e2d7f42b and page 1","timestamp":"2025-04-04T23:54:33.531Z"}
+{"level":"info","message":"717a0704-871f-413e-b723-6b99e2d7f42b","timestamp":"2025-04-04T23:54:33.532Z"}
+{"level":"info","message":"[GET] /files/717a0704-871f-413e-b723-6b99e2d7f42b?page=1 - 2025-04-04T23:54:39.429Z","timestamp":"2025-04-04T23:54:39.429Z"}
+{"level":"info","message":"Getting status for file 717a0704-871f-413e-b723-6b99e2d7f42b and page 1","timestamp":"2025-04-04T23:54:39.430Z"}
+{"level":"info","message":"717a0704-871f-413e-b723-6b99e2d7f42b","timestamp":"2025-04-04T23:54:39.431Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-04T23:55:11.705Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-04T23:55:13.337Z"}
+{"level":"info","message":"[POST] /files - 2025-04-04T23:55:37.179Z","timestamp":"2025-04-04T23:55:37.181Z"}
+{"level":"info","message":"📥 Message received: uuid=d5df2136-2182-4f68-b8a9-4af6188b1860, path=uploads\\1743810937192-tmpkiksj2ui.xlsx","timestamp":"2025-04-04T23:55:38.765Z"}
+{"level":"info","message":"✅ File d5df2136-2182-4f68-b8a9-4af6188b1860 processed and acknowledged","timestamp":"2025-04-04T23:55:52.051Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-04T23:56:03.667Z","timestamp":"2025-04-04T23:56:03.667Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-04T23:56:03.670Z"}
+{"level":"info","message":"d5df2136-2182-4f68-b8a9-4af6188b1860","timestamp":"2025-04-04T23:56:03.671Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-04T23:57:06.484Z","timestamp":"2025-04-04T23:57:06.499Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-04T23:57:06.508Z"}
+{"level":"info","message":"d5df2136-2182-4f68-b8a9-4af6188b1860","timestamp":"2025-04-04T23:57:06.509Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-04T23:57:46.818Z","timestamp":"2025-04-04T23:57:46.820Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-04T23:57:46.824Z"}
+{"level":"info","message":"d5df2136-2182-4f68-b8a9-4af6188b1860","timestamp":"2025-04-04T23:57:46.825Z"}
+{"file":{"__v":0,"_id":"67f07179af93876f8f5f2e74","createdAt":"2025-04-04T23:55:37.322Z","filePath":"uploads\\1743810937192-tmpkiksj2ui.xlsx","status":"done","updatedAt":"2025-04-04T23:55:51.321Z","uuid":"d5df2136-2182-4f68-b8a9-4af6188b1860"},"level":"info","message":"BBBBBBBBBBBB","timestamp":"2025-04-04T23:57:46.849Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-04T23:58:37.371Z","timestamp":"2025-04-04T23:58:37.372Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-04T23:58:37.377Z"}
+{"level":"info","message":"d5df2136-2182-4f68-b8a9-4af6188b1860","timestamp":"2025-04-04T23:58:37.379Z"}
+{"$__":{"activePaths":{"paths":{"__v":"init","_id":"init","createdAt":"init","filePath":"init","status":"init","updatedAt":"init","uuid":"init"},"states":{"default":{},"init":{"__v":true,"_id":true,"createdAt":true,"filePath":true,"status":true,"updatedAt":true,"uuid":true},"require":{}}},"skipId":true},"$isNew":false,"_doc":{"__v":0,"_id":"67f07179af93876f8f5f2e74","createdAt":"2025-04-04T23:55:37.322Z","filePath":"uploads\\1743810937192-tmpkiksj2ui.xlsx","status":"done","updatedAt":"2025-04-04T23:55:51.321Z","uuid":"d5df2136-2182-4f68-b8a9-4af6188b1860"},"level":"info","message":"BBBBBBBBBBBB","timestamp":"2025-04-04T23:58:37.409Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-05T00:00:07.482Z","timestamp":"2025-04-05T00:00:07.483Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-05T00:00:07.488Z"}
+{"level":"info","message":"d5df2136-2182-4f68-b8a9-4af6188b1860","timestamp":"2025-04-05T00:00:07.489Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4a6188b1860?page=1 - 2025-04-05T00:00:44.481Z","timestamp":"2025-04-05T00:00:44.481Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4a6188b1860 and page 1","timestamp":"2025-04-05T00:00:44.484Z"}
+{"level":"info","message":"d5df2136-2182-4f68-b8a9-4a6188b1860","timestamp":"2025-04-05T00:00:44.485Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-05T00:00:51.649Z","timestamp":"2025-04-05T00:00:51.649Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-05T00:00:51.651Z"}
+{"level":"info","message":"d5df2136-2182-4f68-b8a9-4af6188b1860","timestamp":"2025-04-05T00:00:51.652Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-05T00:06:40.128Z","timestamp":"2025-04-05T00:06:40.137Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-05T00:06:40.142Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?pag=0 - 2025-04-05T00:07:31.235Z","timestamp":"2025-04-05T00:07:31.236Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-05T00:07:31.238Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?pag=0 - 2025-04-05T00:07:37.524Z","timestamp":"2025-04-05T00:07:37.524Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-05T00:07:37.527Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=0 - 2025-04-05T00:07:50.152Z","timestamp":"2025-04-05T00:07:50.153Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 0","timestamp":"2025-04-05T00:07:50.154Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=1 - 2025-04-05T00:09:13.291Z","timestamp":"2025-04-05T00:09:13.291Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=1 - 2025-04-05T00:09:30.571Z","timestamp":"2025-04-05T00:09:30.571Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=1 - 2025-04-05T00:09:36.798Z","timestamp":"2025-04-05T00:09:36.798Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=0 - 2025-04-05T00:09:42.682Z","timestamp":"2025-04-05T00:09:42.682Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=100 - 2025-04-05T00:09:47.977Z","timestamp":"2025-04-05T00:09:47.977Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=80 - 2025-04-05T00:09:53.035Z","timestamp":"2025-04-05T00:09:53.035Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=70 - 2025-04-05T00:09:57.401Z","timestamp":"2025-04-05T00:09:57.401Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=20 - 2025-04-05T00:10:02.116Z","timestamp":"2025-04-05T00:10:02.116Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=10 - 2025-04-05T00:10:05.504Z","timestamp":"2025-04-05T00:10:05.504Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=2 - 2025-04-05T00:10:09.880Z","timestamp":"2025-04-05T00:10:09.880Z"}
+{"level":"info","message":"[POST] /files/d5df2136-2182-4f68-b8a9-4af6188b1860/data?page=2 - 2025-04-05T01:07:02.277Z","timestamp":"2025-04-05T01:07:02.279Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-05T01:07:28.335Z","timestamp":"2025-04-05T01:07:28.336Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-05T01:07:35.093Z","timestamp":"2025-04-05T01:07:35.093Z"}
+{"level":"info","message":"[GET] /files/d5df2136-2182-4f68-b8a9-4af6188b1860?page=1 - 2025-04-05T01:07:40.351Z","timestamp":"2025-04-05T01:07:40.351Z"}
+{"level":"info","message":"Getting status for file d5df2136-2182-4f68-b8a9-4af6188b1860 and page 1","timestamp":"2025-04-05T01:07:40.366Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T01:08:01.502Z","timestamp":"2025-04-05T01:08:01.502Z"}
+{"level":"info","message":"📥 Message received: uuid=e0d03a72-2f38-4888-a3bc-dc6527e1a1ef, path=uploads\\1743815281538-test_errores_completo.xlsx","timestamp":"2025-04-05T01:08:02.481Z"}
+{"level":"info","message":"✅ File e0d03a72-2f38-4888-a3bc-dc6527e1a1ef processed and acknowledged","timestamp":"2025-04-05T01:08:02.997Z"}
+{"level":"info","message":"[GET] /files/e0d03a72-2f38-4888-a3bc-dc6527e1a1ef?page=1 - 2025-04-05T01:08:11.829Z","timestamp":"2025-04-05T01:08:11.829Z"}
+{"level":"info","message":"Getting status for file e0d03a72-2f38-4888-a3bc-dc6527e1a1ef and page 1","timestamp":"2025-04-05T01:08:11.831Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-05T01:10:11.453Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-05T01:10:14.484Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T01:10:24.227Z","timestamp":"2025-04-05T01:10:24.229Z"}
+{"level":"info","message":"📥 Message received: uuid=a30a688e-3de0-4b06-814b-043c74c66cb4, path=uploads\\1743815424273-test_errores_completo.xlsx","timestamp":"2025-04-05T01:10:24.819Z"}
+{"level":"info","message":"✅ File a30a688e-3de0-4b06-814b-043c74c66cb4 processed and acknowledged","timestamp":"2025-04-05T01:10:25.001Z"}
+{"level":"info","message":"[POST] /files - 2025-04-05T01:10:43.631Z","timestamp":"2025-04-05T01:10:43.631Z"}
+{"level":"info","message":"📥 Message received: uuid=7d277809-7a47-4b81-a2fb-951d01e77c1a, path=uploads\\1743815443640-archivo_200mil_con_errores.xlsx","timestamp":"2025-04-05T01:10:44.331Z"}
+{"level":"info","message":"[GET] /files/7d277809-7a47-4b81-a2fb-951d01e77c1a?page=1 - 2025-04-05T01:11:00.699Z","timestamp":"2025-04-05T01:11:00.699Z"}
+{"level":"info","message":"Getting status for file 7d277809-7a47-4b81-a2fb-951d01e77c1a and page 1","timestamp":"2025-04-05T01:11:00.705Z"}
+{"level":"info","message":"✅ File 7d277809-7a47-4b81-a2fb-951d01e77c1a processed and acknowledged","timestamp":"2025-04-05T01:11:10.723Z"}
+{"level":"info","message":"[GET] /files/7d277809-7a47-4b81-a2fb-951d01e77c1a?page=1 - 2025-04-05T01:11:16.374Z","timestamp":"2025-04-05T01:11:16.374Z"}
+{"level":"info","message":"Getting status for file 7d277809-7a47-4b81-a2fb-951d01e77c1a and page 1","timestamp":"2025-04-05T01:11:16.375Z"}
+{"level":"info","message":"[GET] /files/7d277809-7a47-4b81-a2fb-951d01e77c1a?page=10 - 2025-04-05T01:11:31.104Z","timestamp":"2025-04-05T01:11:31.104Z"}
+{"level":"info","message":"Getting status for file 7d277809-7a47-4b81-a2fb-951d01e77c1a and page 10","timestamp":"2025-04-05T01:11:31.106Z"}
+{"level":"info","message":"[GET] /files/7d277809-7a47-4b81-a2fb-951d01e77c1a?page=20 - 2025-04-05T01:11:39.509Z","timestamp":"2025-04-05T01:11:39.509Z"}
+{"level":"info","message":"Getting status for file 7d277809-7a47-4b81-a2fb-951d01e77c1a and page 20","timestamp":"2025-04-05T01:11:39.511Z"}
+{"level":"info","message":"Getting status for file 123 and page 1","timestamp":"2025-04-05T01:30:34.303Z"}

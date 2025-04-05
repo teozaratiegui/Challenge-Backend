@@ -8,7 +8,8 @@ import fs from 'fs'
 import { logger } from "infra/logger/logger"
 
 export class ProcessFileUseCase {
-  private PAGE_SIZE = 300
+  private VALID_PAGE_SIZE = 300
+  private ERROR_PAGE_SIZE = 500
 
   constructor(
     private fileRepo: IFileRepository,
@@ -42,12 +43,12 @@ export class ProcessFileUseCase {
     }
 
     const saveIfFull = async () => {
-      if (validRows.length >= this.PAGE_SIZE) {
-        const chunk = validRows.splice(0, this.PAGE_SIZE)
+      if (validRows.length >= this.VALID_PAGE_SIZE) {
+        const chunk = validRows.splice(0, this.VALID_PAGE_SIZE)
         validPageDocs.push({ uuid, page: validPage++, data: chunk })
       }
-      if (errorRows.length >= this.PAGE_SIZE) {
-        const chunk = errorRows.splice(0, this.PAGE_SIZE)
+      if (errorRows.length >= this.ERROR_PAGE_SIZE) {
+        const chunk = errorRows.splice(0, this.ERROR_PAGE_SIZE)
         errorPageDocs.push({ uuid, page: errorPage++, fileErrors: chunk })
       }
     }
