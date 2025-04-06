@@ -6,14 +6,30 @@ import FileDataRepository from 'infra/repositories/mongodb/fileDataRepository'
 import FileErrorsRepository from 'infra/repositories/mongodb/fileErrorsRepository'
 import connectDB from 'infra/databases/mongoDatabase'
 
-const RABBITMQ_URL = 'amqp://localhost'
+const RABBITMQ_URL = process.env.RABBITMQ_URL || 'amqp://localhost'
+
 const QUEUE_NAME = 'xlsx.upload'
+
+const connectWithRetry = async (retries = 10, delay = 3000) => {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const connection = await amqp.connect(RABBITMQ_URL)
+      const channel = await connection.createChannel()
+      logger.info(`✅ Connected to RabbitMQ after ${i + 1} attempt(s)`)
+      return { connection, channel } // ✅ bien tipado
+    } catch (err) {
+      logger.error(`❌ RabbitMQ connection failed (attempt ${i + 1}/${retries}):`, err)
+      await new Promise(res => setTimeout(res, delay))
+    }
+  }
+  throw new Error('❌ Failed to connect to RabbitMQ after multiple attempts')
+}
+
 
 async function bootstrap() {
   await connectDB()
   logger.info('✅ MongoDB connected from worker')
-  const connection = await amqp.connect(RABBITMQ_URL)
-  const channel = await connection.createChannel()
+  const { connection, channel } = await connectWithRetry()
   await channel.assertQueue(QUEUE_NAME, { durable: true })
 
   const repository = new FileRepository()
@@ -44,3 +60,5 @@ async function bootstrap() {
 bootstrap().catch((err) => {
   logger.error('❌ Worker failed to start:', err)
 })
+
+ 
