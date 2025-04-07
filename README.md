@@ -31,19 +31,6 @@ Set up environment variables:
 ```bash
 cp .env.example .env
 ```
-
-`.env` file includes:
-```env
-PORT=3000
-MONGO_URI=mongodb://mongo:27017/challengebackend
-MONGO_TEST_URI=mongodb://mongo:27017/challengebackend_test
-JWT_SECRET=mysecretkey
-API_KEY_UPLOAD=1182
-API_KEY_STATUS=2002
-API_KEY_DATA=1964
-RABBITMQ_URL=amqp://rabbitmq:5672
-```
-
 ---
 
 ## 🚀 Run the app
