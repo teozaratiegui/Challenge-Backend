@@ -3,9 +3,10 @@ import mongoose from 'mongoose'
 import { FileDataRepository } from 'infra/repositories/mongodb/fileDataRepository'
 
 const validRepo = new FileDataRepository()
+const MONGO_URI = process.env.MONGO_TEST_URI || 'mongodb://mongo:27017/test' 
 
 beforeAll(async () => {
-  await mongoose.connect('mongodb://localhost:27017/test', {
+  await mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   } as any)

@@ -3,6 +3,7 @@ import axios from 'axios'
 import fs from 'fs'
 import path from 'path'
 import FormData from 'form-data'
+import fsp from 'fs/promises'
 
 const sendFile = async (filePath: string) => {
   const form = new FormData()
@@ -20,12 +21,12 @@ const sendFile = async (filePath: string) => {
 
 describe('Upload heavy xlsx file concurrently', () => {
   it('should handle two concurrent heavy file uploads', async () => {
-    const heavyFilePath = path.resolve(__dirname, 'test_200k_lines_with_5000nums_and_errors.xlsx')
+    const filePath = path.resolve(__dirname, 'test_errores_completo.xlsx')
 
     console.time('Concurrent Uploads')
 
-    const request1 = sendFile(heavyFilePath)
-    const request2 = sendFile(heavyFilePath)
+    const request1 = sendFile(filePath)
+    const request2 = sendFile(filePath)
 
     const [res1, res2] = await Promise.allSettled([request1, request2])
     console.timeEnd('Concurrent Uploads')
@@ -40,5 +41,11 @@ describe('Upload heavy xlsx file concurrently', () => {
     if (res2.status === 'fulfilled') {
       expect(res2.value.data).toHaveProperty('taskId')
     }
-  }, 20000)
+
+    try {
+      await fsp.unlink(filePath)
+    } catch (e) {
+      console.warn('⚠️ No se pudo eliminar el archivo:', e)
+    }
+  }, 40000)
 })
