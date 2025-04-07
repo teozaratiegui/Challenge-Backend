@@ -19,9 +19,25 @@ const sendFile = async (filePath: string) => {
   })
 }
 
+const deleteUploadedTestFiles = async (suffix: string) => {
+  const uploadsDir = path.resolve(__dirname, '../../../uploads')
+  const files = await fsp.readdir(uploadsDir)
+  const matchedFiles = files.filter(file => file.endsWith(suffix))
+
+  for (const file of matchedFiles) {
+    const fullPath = path.join(uploadsDir, file)
+    try {
+      await fsp.unlink(fullPath)
+      console.log(`🧹 Deleted: ${fullPath}`)
+    } catch (err) {
+      console.warn('⚠️ Failed to delete file:', err)
+    }
+  }
+}
+
 describe('Upload heavy xlsx file concurrently', () => {
   it('should handle two concurrent heavy file uploads', async () => {
-    const filePath = path.resolve(__dirname, 'test_errores_completo.xlsx')
+    const filePath = path.resolve(__dirname, 'test_file.xlsx')
 
     console.time('Concurrent Uploads')
 
@@ -43,7 +59,7 @@ describe('Upload heavy xlsx file concurrently', () => {
     }
 
     try {
-      await fsp.unlink(filePath)
+      await deleteUploadedTestFiles('test_file')
     } catch (e) {
       console.warn('⚠️ No se pudo eliminar el archivo:', e)
     }

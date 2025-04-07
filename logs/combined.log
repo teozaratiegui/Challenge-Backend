@@ -2062,3 +2062,64 @@
 {"level":"info","message":"✅ File ac3b60ed-3115-413a-b506-d12aa9fe2b53 processed and acknowledged","timestamp":"2025-04-07T02:53:55.023Z"}
 {"level":"info","message":"[GET] /files/ac3b60ed-3115-413a-b506-d12aa9fe2b53?limit=100&offset=0 - 2025-04-07T02:54:01.598Z","timestamp":"2025-04-07T02:54:01.598Z"}
 {"level":"info","message":"Getting status for file ac3b60ed-3115-413a-b506-d12aa9fe2b53 with limit 100 and offset 0","timestamp":"2025-04-07T02:54:01.599Z"}
+{"level":"info","message":"[POST] /files - 2025-04-07T15:59:57.991Z","timestamp":"2025-04-07T15:59:58.004Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-07T16:00:14.512Z"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744041598191-test_200k_lines_with_5000nums.xlsx","timestamp":"2025-04-07T16:00:14.559Z","uuid":"5ec62e58-611c-4215-8b87-5fa69c4edad4"}
+{"level":"info","message":"📥 Message received: uuid=5ec62e58-611c-4215-8b87-5fa69c4edad4, path=uploads/1744041598191-test_200k_lines_with_5000nums.xlsx","timestamp":"2025-04-07T16:00:14.657Z"}
+{"level":"info","message":"✅ File 5ec62e58-611c-4215-8b87-5fa69c4edad4 processed and acknowledged","timestamp":"2025-04-07T16:01:53.323Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-07T16:45:19.512Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 1/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T16:45:19.540Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 2/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T16:45:23.362Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 3/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T16:45:26.472Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 4 attempt(s)","timestamp":"2025-04-07T16:45:29.647Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-07T16:45:29.670Z"}
+{"level":"info","message":"[POST] /files - 2025-04-07T16:46:55.126Z","timestamp":"2025-04-07T16:46:55.127Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-07T16:47:03.612Z"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744044415139-test_200k_lines_with_5000nums.xlsx","timestamp":"2025-04-07T16:47:03.622Z","uuid":"7ea442cc-4880-4769-8902-5037cfb8a87d"}
+{"level":"info","message":"📥 Message received: uuid=7ea442cc-4880-4769-8902-5037cfb8a87d, path=uploads/1744044415139-test_200k_lines_with_5000nums.xlsx","timestamp":"2025-04-07T16:47:03.663Z"}
+{"level":"info","message":"[GET] /files/7ea442cc-4880-4769-8902-5037cfb8a87d?limit=100&offset=0 - 2025-04-07T16:47:13.973Z","timestamp":"2025-04-07T16:47:13.973Z"}
+{"level":"info","message":"Getting status for file 7ea442cc-4880-4769-8902-5037cfb8a87d with limit 100 and offset 0","timestamp":"2025-04-07T16:47:13.979Z"}
+{"level":"info","message":"[GET] /files/7ea442cc-4880-4769-8902-5037cfb8a87d?limit=100&offset=0 - 2025-04-07T16:47:22.874Z","timestamp":"2025-04-07T16:47:22.874Z"}
+{"level":"info","message":"Getting status for file 7ea442cc-4880-4769-8902-5037cfb8a87d with limit 100 and offset 0","timestamp":"2025-04-07T16:47:22.876Z"}
+{"level":"info","message":"[GET] /files/7ea442cc-4880-4769-8902-5037cfb8a87d?limit=100&offset=0 - 2025-04-07T16:47:27.269Z","timestamp":"2025-04-07T16:47:27.269Z"}
+{"level":"info","message":"Getting status for file 7ea442cc-4880-4769-8902-5037cfb8a87d with limit 100 and offset 0","timestamp":"2025-04-07T16:47:27.270Z"}
+{"level":"info","message":"✅ File 7ea442cc-4880-4769-8902-5037cfb8a87d processed and acknowledged","timestamp":"2025-04-07T16:47:38.310Z"}
+{"level":"info","message":"[GET] /files/7ea442cc-4880-4769-8902-5037cfb8a87d?limit=100&offset=0 - 2025-04-07T16:47:41.354Z","timestamp":"2025-04-07T16:47:41.354Z"}
+{"level":"info","message":"Getting status for file 7ea442cc-4880-4769-8902-5037cfb8a87d with limit 100 and offset 0","timestamp":"2025-04-07T16:47:41.356Z"}
+{"level":"info","message":"[GET] /files/7ea442cc-4880-4769-8902-5037cfb8a87d/data?limit=100&offset=0 - 2025-04-07T16:48:01.550Z","timestamp":"2025-04-07T16:48:01.551Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-07T16:48:09.570Z","timestamp":"2025-04-07T16:48:09.570Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-07T16:48:20.048Z","timestamp":"2025-04-07T16:48:20.048Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-07T16:48:20.250Z","timestamp":"2025-04-07T16:48:20.250Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-07T16:48:20.273Z","timestamp":"2025-04-07T16:48:20.273Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-07T16:48:20.284Z","timestamp":"2025-04-07T16:48:20.284Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-07T16:48:20.287Z","timestamp":"2025-04-07T16:48:20.287Z"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-07T16:48:20.971Z","timestamp":"2025-04-07T16:48:20.971Z"}
+{"level":"info","message":"[GET] /files/7ea442cc-4880-4769-8902-5037cfb8a87d/data?limit=8&offset=0 - 2025-04-07T16:48:40.477Z","timestamp":"2025-04-07T16:48:40.477Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-07T16:52:13.939Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 1/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T16:52:13.969Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 2/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T16:52:17.060Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 3/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T16:52:20.122Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 4 attempt(s)","timestamp":"2025-04-07T16:52:23.290Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-07T16:52:23.304Z"}
+{"level":"info","message":"[POST] /files - 2025-04-07T16:52:59.217Z","timestamp":"2025-04-07T16:52:59.218Z"}
+{"level":"info","message":"[POST] /files - 2025-04-07T16:52:59.241Z","timestamp":"2025-04-07T16:52:59.241Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-07T16:53:00.393Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-07T16:53:16.766Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-07T16:53:16.778Z"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744044779235-test_file.xlsx","timestamp":"2025-04-07T16:53:16.862Z","uuid":"af31f7cd-b9dc-4942-a110-ae5b70709315"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744044779246-test_file.xlsx","timestamp":"2025-04-07T16:53:16.899Z","uuid":"8e8ef4fe-03a8-449c-9c22-720df2ffad14"}
+{"level":"info","message":"📥 Message received: uuid=8e8ef4fe-03a8-449c-9c22-720df2ffad14, path=uploads/1744044779246-test_file.xlsx","timestamp":"2025-04-07T16:53:18.638Z"}
+{"level":"info","message":"📥 Message received: uuid=af31f7cd-b9dc-4942-a110-ae5b70709315, path=uploads/1744044779235-test_file.xlsx","timestamp":"2025-04-07T16:53:18.742Z"}
+{"level":"info","message":"✅ File af31f7cd-b9dc-4942-a110-ae5b70709315 processed and acknowledged","timestamp":"2025-04-07T16:54:29.402Z"}
+{"level":"info","message":"✅ File 8e8ef4fe-03a8-449c-9c22-720df2ffad14 processed and acknowledged","timestamp":"2025-04-07T16:54:29.518Z"}
+{"level":"info","message":"[POST] /files - 2025-04-07T16:55:16.441Z","timestamp":"2025-04-07T16:55:16.444Z"}
+{"level":"info","message":"[POST] /files - 2025-04-07T16:55:34.182Z","timestamp":"2025-04-07T16:55:34.182Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-07T16:55:43.535Z"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744044934200-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-07T16:55:43.555Z","uuid":"82ada3da-135f-4fc1-ba67-540bb45df74e"}
+{"level":"info","message":"📥 Message received: uuid=82ada3da-135f-4fc1-ba67-540bb45df74e, path=uploads/1744044934200-test_200k_lines_with_5000nums_and_errors.xlsx","timestamp":"2025-04-07T16:55:43.578Z"}
+{"level":"info","message":"[GET] /files/82ada3da-135f-4fc1-ba67-540bb45df74?limit=100&offset=0 - 2025-04-07T16:56:27.427Z","timestamp":"2025-04-07T16:56:27.429Z"}
+{"level":"info","message":"Getting status for file 82ada3da-135f-4fc1-ba67-540bb45df74 with limit 100 and offset 0","timestamp":"2025-04-07T16:56:27.493Z"}
+{"level":"info","message":"✅ File 82ada3da-135f-4fc1-ba67-540bb45df74e processed and acknowledged","timestamp":"2025-04-07T16:56:50.682Z"}
+{"level":"info","message":"[GET] /files/82ada3da-135f-4fc1-ba67-540bb45df74e?limit=100&offset=0 - 2025-04-07T16:56:53.142Z","timestamp":"2025-04-07T16:56:53.142Z"}
+{"level":"info","message":"Getting status for file 82ada3da-135f-4fc1-ba67-540bb45df74e with limit 100 and offset 0","timestamp":"2025-04-07T16:56:53.143Z"}
+{"level":"info","message":"[GET] /files/82ada3da-135f-4fc1-ba67-540bb45df74e/data?limit=8&offset=0 - 2025-04-07T16:57:09.286Z","timestamp":"2025-04-07T16:57:09.286Z"}
