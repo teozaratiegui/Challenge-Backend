@@ -74,7 +74,6 @@ export function handleMulterError(middleware: any) {
         return next(err)
       }
 
-      // ✅ Validar headers del archivo Excel
       if (req.file) {
         try {
           const workbook = new ExcelJS.Workbook()

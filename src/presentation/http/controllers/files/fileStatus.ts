@@ -31,6 +31,10 @@ export class GetFileStatusController implements IController {
       throw new DomainError(FileErrors.INVALID_PAGE, 'You cannot request more than 100 records')
     }
 
+    if (limit < 0 || offset < 0) {
+      throw new DomainError(FileErrors.INVALID_PAGE, 'Limit and offset must be positive numbers')
+    }
+
     logger.info(`Getting status for file ${fileId} with limit ${limit} and offset ${offset}`)
     const result = await this.useCase.execute(fileId, limit, offset)
     const success = new HttpSuccess().success_200(result)

@@ -25,6 +25,10 @@ export class GetFileDataPageController implements IController {
       throw new DomainError(FileErrors.INVALID_PAGE, 'Limit and offset must be numbers')
     }
 
+    if (limitValue < 0 || offsetValue < 0) {
+      throw new DomainError(FileErrors.INVALID_PAGE, 'Limit and offset must be positive numbers')
+    }
+
     if (limitValue > 100) {
       throw new DomainError(FileErrors.INVALID_PAGE, 'You cannot request more than 100 records')
     }
