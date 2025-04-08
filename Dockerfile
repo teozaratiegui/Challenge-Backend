@@ -4,6 +4,8 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /usr/src/app
 
+RUN npm install -g yarn@1.22.22
+
 # Copy package and lock files
 COPY package.json yarn.lock ./
 

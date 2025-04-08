@@ -2208,3 +2208,26 @@
 {"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-07T22:08:29.698Z"}
 {"level":"info","message":"[GET] /files/89867711-4626-4b4c-b612-4eff6b5160bb/data?limit=-100&offset=0 - 2025-04-07T22:09:45.983Z","timestamp":"2025-04-07T22:09:45.984Z"}
 {"level":"info","message":"[GET] /files/89867711-4626-4b4c-b612-4eff6b5160bb/data?limit=100&offset=0 - 2025-04-07T22:09:51.081Z","timestamp":"2025-04-07T22:09:51.081Z"}
+{"level":"info","message":"[POST] /files - 2025-04-07T22:12:25.686Z","timestamp":"2025-04-07T22:12:25.692Z"}
+{"level":"info","message":"[POST] /files - 2025-04-07T22:12:25.898Z","timestamp":"2025-04-07T22:12:25.899Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-07T22:12:26.796Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-07T22:12:47.093Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-07T22:12:47.105Z"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744063945903-test_file.xlsx","timestamp":"2025-04-07T22:12:47.136Z","uuid":"889fb521-7d37-4638-9866-e62afa066c16"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744063945883-test_file.xlsx","timestamp":"2025-04-07T22:12:47.149Z","uuid":"cad9c86e-634b-4a2c-9721-be70cadf6904"}
+{"level":"info","message":"📥 Message received: uuid=cad9c86e-634b-4a2c-9721-be70cadf6904, path=uploads/1744063945883-test_file.xlsx","timestamp":"2025-04-07T22:12:47.268Z"}
+{"level":"info","message":"📥 Message received: uuid=889fb521-7d37-4638-9866-e62afa066c16, path=uploads/1744063945903-test_file.xlsx","timestamp":"2025-04-07T22:12:47.429Z"}
+{"level":"info","message":"✅ File 889fb521-7d37-4638-9866-e62afa066c16 processed and acknowledged","timestamp":"2025-04-07T22:14:14.856Z"}
+{"level":"info","message":"✅ File cad9c86e-634b-4a2c-9721-be70cadf6904 processed and acknowledged","timestamp":"2025-04-07T22:14:14.903Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-07T22:28:48.232Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 1/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T22:28:48.262Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 2/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T22:28:51.268Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 3/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-07T22:28:54.275Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 4 attempt(s)","timestamp":"2025-04-07T22:28:57.338Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-07T22:28:57.477Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-07T22:30:07.789Z","timestamp":"2025-04-07T22:30:07.789Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-07T22:30:08.136Z","timestamp":"2025-04-07T22:30:08.136Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-07T22:30:08.148Z","timestamp":"2025-04-07T22:30:08.148Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-07T22:30:08.154Z","timestamp":"2025-04-07T22:30:08.154Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-07T22:30:08.158Z","timestamp":"2025-04-07T22:30:08.158Z"}
+{"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-07T22:30:08.704Z","timestamp":"2025-04-07T22:30:08.704Z"}

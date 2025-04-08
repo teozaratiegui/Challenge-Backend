@@ -174,6 +174,35 @@ uploadRoutes.get(
  *     responses:
  *       200:
  *         description: File data retrieved
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 total:
+ *                   type: integer
+ *                 hasNext:
+ *                   type: boolean
+ *                 limit:
+ *                   type: integer
+ *                 offset:
+ *                   type: integer
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     type: object
+ *                     properties:
+ *                       name:
+ *                         type: string
+ *                         example: Alice
+ *                       age:
+ *                         type: integer
+ *                         example: 30
+ *                       nums:
+ *                         type: array
+ *                         items:
+ *                           type: integer
+ *                         example: [1, 2, 3]
  *       400:
  *         description: Invalid request or limit exceeded
  *       403:
@@ -185,6 +214,7 @@ uploadRoutes.get(
  *       500:
  *         description: Server error
  */
+
 uploadRoutes.get(
   '/:uuid/data',
   ensureAuthenticated('API_KEY_DATA'),
