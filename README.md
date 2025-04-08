@@ -1,108 +1,83 @@
-# Excel Upload & Processing API
+# 📊 Excel Upload & Processing API
 
-A scalable Node.js API to upload, validate and process `.xlsx` files asynchronously. The system enqueues the file, processes it in the background, stores both valid and erroneous records, and provides endpoints to query the job status and results.
-
----
-
-## 📦 Requirements
-
-- [Docker](https://www.docker.com/) (including Docker Compose) **must be installed** to run MongoDB and RabbitMQ containers.
-- [Node.js](https://nodejs.org/) & [Yarn](https://yarnpkg.com/) installed locally to run the API.
-
-MongoDB is used to persist the files, parsed records and error logs.  
-RabbitMQ is used to decouple file uploads from processing using a messaging queue.
+This API allows you to upload `.xlsx` files, validate them, and process their content asynchronously. It uses **MongoDB** for storage, **RabbitMQ** for background processing, and is containerized with **Docker Compose**.
 
 ---
 
-## ⚙️ Setup
+## 🔧 Tech Stack
+- **Node.js** + **Express** (API logic)
+- **MongoDB** (stores parsed data and errors)
+- **RabbitMQ** (queues and background job coordination)
+- **Docker & Docker Compose** (container orchestration)
+- **Yarn v1.22.22** (explicitly installed inside containers)
 
-Clone the repository:
+> ✅ Yarn is force-installed inside the containers, so **corepack is NOT required**, and no `packageManager` field is used in `package.json`.
+
+---
+
+## 🚀 Quickstart
+
+### 1. Clone & setup
 ```bash
 git clone https://github.com/your-username/excel-api
 cd excel-api
-```
-
-Install dependencies:
-```bash
 yarn install
-```
-
-Set up environment variables:
-```bash
 cp .env.example .env
 ```
----
 
-## 🚀 Run the app
-
-Launch the full system (API + MongoDB + RabbitMQ + Worker):
+### 2. Run the full stack (API + DB + Queue + Worker)
 ```bash
 docker compose up --build
 ```
-
-This will:
-- Start MongoDB and RabbitMQ services
-- Start the API server on `localhost:3000`
-- Start the background worker
-
-> 🔁 If some services fail to connect on first try, restart the containers.
+> If you experience any first-time connection issues, simply restart the containers.
 
 ---
 
-## 📌 Endpoints
-
-All endpoints require specific API keys. These must be passed using the appropriate headers.
-
-### 1. Upload an Excel File
-**POST** `/files`
-
-Headers:
+## 🔐 API Authentication
+All endpoints require specific API keys via the `x-api-key` header. These keys are defined in the `.env.example` file:
+```env
+API_KEY_UPLOAD=1182
+API_KEY_STATUS=2002
+API_KEY_DATA=1964
 ```
-x-api-key: 1182
-```
-Body (multipart/form-data):
-- `file`: Excel file (.xlsx)
 
-Only files with headers: `name`, `age`, `nums` are accepted.
+---
 
-**Response**
+## 📥 Upload Workflow
+
+### 🔼 Upload Excel
+`POST /files`
+- Header: `x-api-key: 1182`
+- Form Data: `file` (must be a `.xlsx` file with `name`, `age`, `nums` headers)
+
+✅ Example Response:
 ```json
 {
   "taskId": "a4213d9a-891b-4bc4-8ea1-19222c807726"
 }
 ```
 
-### 2. Check Job Status
-**GET** `/files/{id}?limit=10&offset=0`
+### 🔍 Check Status
+`GET /files/{id}?limit=10&offset=0`
+- Header: `x-api-key: 2002`
 
-Headers:
-```
-x-api-key: 2002
-```
-
-**Response**
+✅ Response:
 ```json
 {
   "status": "done",
+  "errors": [{ "row": 5, "col": 3 }],
   "total": 12,
   "hasNext": true,
   "limit": 10,
   "offset": 0
-  "errors": [
-    { "row": 5, "col": 3 }
-  ],
 }
 ```
 
-### 3. Retrieve Valid Data
-**GET** `/files/{uuid}/data?limit=10&offset=0`
+### 📄 Get Valid Data
+`GET /files/{uuid}/data?limit=10&offset=0`
+- Header: `x-api-key: 1964`
 
-Headers:
-```
-x-api-key: 1964
-```
-
-**Response**
+✅ Response:
 ```json
 {
   "total": 2,
@@ -118,21 +93,18 @@ x-api-key: 1964
 
 ---
 
-## 🧪 Running tests
-
+## 🧪 Run Tests
 ```bash
 docker exec -it api yarn test
 ```
-Integration and unit tests using Vitest.
+- Uses [Vitest](https://vitest.dev) for unit and integration tests
 
 ---
 
-## 🔧 Notes
-- The worker uses streaming to process large Excel files efficiently, avoiding memory overload.
-- Files are automatically deleted after being processed.
-- Mapping validation is strict — the file must contain only `name`, `age`, `nums` in that order.
+## ⚙️ Notes & Behavior
+- The headers `name`, `age`, `nums` are required for the file to be processed
+- Files with invalid structure are rejected immediately
+- Worker uses **streaming** to process large files without memory issues
+- Uploaded files are **automatically deleted** after processing
 
----
-
-Good luck! 🚀
 
