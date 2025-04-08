@@ -2231,3 +2231,12 @@
 {"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-07T22:30:08.154Z","timestamp":"2025-04-07T22:30:08.154Z"}
 {"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-07T22:30:08.158Z","timestamp":"2025-04-07T22:30:08.158Z"}
 {"level":"info","message":"[GET] /api-docs/favicon-32x32.png - 2025-04-07T22:30:08.704Z","timestamp":"2025-04-07T22:30:08.704Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-08T14:13:46.358Z"}
+{"address":"172.18.0.2","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 1/10): connect ECONNREFUSED 172.18.0.2:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.2:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-08T14:13:46.431Z"}
+{"address":"172.18.0.2","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 2/10): connect ECONNREFUSED 172.18.0.2:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.2:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-08T14:13:49.439Z"}
+{"address":"172.18.0.2","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 3/10): connect ECONNREFUSED 172.18.0.2:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.2:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-08T14:13:52.443Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 4 attempt(s)","timestamp":"2025-04-08T14:13:55.523Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-08T14:13:55.543Z"}
+{"level":"info","message":"[POST] /files - 2025-04-08T14:14:14.034Z","timestamp":"2025-04-08T14:14:14.035Z"}
+{"level":"info","message":"[POST] /files - 2025-04-08T14:14:14.060Z","timestamp":"2025-04-08T14:14:14.060Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-08T14:14:14.837Z"}
