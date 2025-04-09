@@ -90,7 +90,13 @@ API_KEY_DATA=1964
   ]
 }
 ```
+📚 API Docs
 
+Interactive Swagger UI is available at:
+
+👉 http://localhost:3000/api-docs/
+
+⚠️ Note: When retrieving data from large Excel files (e.g. rows containing nums arrays with 5000+ items), Swagger may have trouble displaying such large payloads properly. It is recommended to use a smaller limit (e.g. 10) in Swagger or test through Postman, which handles larger responses more reliably (up to 100 records).
 ---
 
 ## 🧪 Run Tests
