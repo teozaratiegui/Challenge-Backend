@@ -8,8 +8,8 @@ WORKDIR /usr/src/app
 COPY package.json yarn.lock ./
 
 # Install dependencies
-RUN yarn install
-
+RUN npm install --frozen-lockfile
+ 
 # Copy the rest of the app
 COPY . .
 

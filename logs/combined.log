@@ -2257,3 +2257,30 @@
 {"level":"info","message":"📥 Message received: uuid=9c8be1e0-5a6f-4f8f-8dca-f03266c1c598, path=uploads/1744145778282-test_file.xlsx","timestamp":"2025-04-08T20:56:38.882Z"}
 {"level":"info","message":"✅ File 9c8be1e0-5a6f-4f8f-8dca-f03266c1c598 processed and acknowledged","timestamp":"2025-04-08T20:57:49.560Z"}
 {"level":"info","message":"✅ File 85baa79d-b689-49a6-a510-c7f5a5727995 processed and acknowledged","timestamp":"2025-04-08T20:57:49.572Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-08T21:22:19.607Z","timestamp":"2025-04-08T21:22:19.611Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-08T21:22:19.850Z","timestamp":"2025-04-08T21:22:19.850Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-08T21:22:19.865Z","timestamp":"2025-04-08T21:22:19.865Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-08T21:22:19.875Z","timestamp":"2025-04-08T21:22:19.875Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-08T21:22:19.897Z","timestamp":"2025-04-08T21:22:19.897Z"}
+{"level":"info","message":"[GET] /api-docs - 2025-04-08T21:22:27.126Z","timestamp":"2025-04-08T21:22:27.126Z"}
+{"level":"info","message":"[GET] /api-docs/ - 2025-04-08T21:22:27.157Z","timestamp":"2025-04-08T21:22:27.157Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui.css - 2025-04-08T21:22:27.307Z","timestamp":"2025-04-08T21:22:27.307Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-bundle.js - 2025-04-08T21:22:27.317Z","timestamp":"2025-04-08T21:22:27.317Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-standalone-preset.js - 2025-04-08T21:22:27.332Z","timestamp":"2025-04-08T21:22:27.332Z"}
+{"level":"info","message":"[GET] /api-docs/swagger-ui-init.js - 2025-04-08T21:22:27.337Z","timestamp":"2025-04-08T21:22:27.337Z"}
+{"level":"info","message":"✅ MongoDB connected from worker","timestamp":"2025-04-09T21:12:37.638Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 1/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-09T21:12:37.662Z"}
+{"address":"172.18.0.3","code":"ECONNREFUSED","errno":-111,"level":"error","message":"❌ RabbitMQ connection failed (attempt 2/10): connect ECONNREFUSED 172.18.0.3:5672","port":5672,"stack":"Error: connect ECONNREFUSED 172.18.0.3:5672\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1555:16)","syscall":"connect","timestamp":"2025-04-09T21:12:40.666Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 3 attempt(s)","timestamp":"2025-04-09T21:12:43.731Z"}
+{"level":"info","message":"📡 Waiting for messages in xlsx.upload","timestamp":"2025-04-09T21:12:43.736Z"}
+{"level":"info","message":"[POST] /files - 2025-04-09T21:13:00.502Z","timestamp":"2025-04-09T21:13:00.503Z"}
+{"level":"info","message":"[POST] /files - 2025-04-09T21:13:00.517Z","timestamp":"2025-04-09T21:13:00.517Z"}
+{"level":"info","message":"Getting status for file 123 with limit 10 and offset 0","timestamp":"2025-04-09T21:13:01.344Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-09T21:13:11.555Z"}
+{"level":"info","message":"✅ Connected to RabbitMQ after 1 attempt(s)","timestamp":"2025-04-09T21:13:11.559Z"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744233180698-test_file.xlsx","timestamp":"2025-04-09T21:13:11.562Z","uuid":"e7b185d0-862a-424b-a642-39c6df282813"}
+{"level":"info","message":"📤 Mensaje enviado a la cola \"xlsx.upload\":","path":"uploads/1744233180701-test_file.xlsx","timestamp":"2025-04-09T21:13:11.573Z","uuid":"e986758b-64f4-48e8-9a97-00a83b84185a"}
+{"level":"info","message":"📥 Message received: uuid=e7b185d0-862a-424b-a642-39c6df282813, path=uploads/1744233180698-test_file.xlsx","timestamp":"2025-04-09T21:13:11.575Z"}
+{"level":"info","message":"📥 Message received: uuid=e986758b-64f4-48e8-9a97-00a83b84185a, path=uploads/1744233180701-test_file.xlsx","timestamp":"2025-04-09T21:13:11.589Z"}
+{"level":"info","message":"✅ File e7b185d0-862a-424b-a642-39c6df282813 processed and acknowledged","timestamp":"2025-04-09T21:14:01.875Z"}
+{"level":"info","message":"✅ File e986758b-64f4-48e8-9a97-00a83b84185a processed and acknowledged","timestamp":"2025-04-09T21:14:01.883Z"}
