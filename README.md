@@ -11,7 +11,6 @@ This API allows you to upload `.xlsx` files, validate them, and process their co
 - **Docker & Docker Compose** (container orchestration)
 - **Yarn 4.9.0** (explicitly installed inside containers)
 
-> ✅ Yarn is force-installed inside the containers, so **corepack is NOT required**, and no `packageManager` field is used in `package.json`.
 
 ---
 
