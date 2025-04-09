@@ -9,7 +9,7 @@ This API allows you to upload `.xlsx` files, validate them, and process their co
 - **MongoDB** (stores parsed data and errors)
 - **RabbitMQ** (queues and background job coordination)
 - **Docker & Docker Compose** (container orchestration)
-- **Yarn v1.22.22** (explicitly installed inside containers)
+- **Yarn 4.9.0** (explicitly installed inside containers)
 
 > ✅ Yarn is force-installed inside the containers, so **corepack is NOT required**, and no `packageManager` field is used in `package.json`.
 
@@ -21,7 +21,6 @@ This API allows you to upload `.xlsx` files, validate them, and process their co
 ```bash
 git clone https://github.com/your-username/excel-api
 cd excel-api
-yarn install
 cp .env.example .env
 ```
 
