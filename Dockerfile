@@ -1,20 +1,20 @@
-# Base image
-FROM node:18-alpine
+FROM node:18
 
-# Set working directory
-WORKDIR /usr/src/app
+# Crear el directorio de la app
+WORKDIR /app
 
-# Copy package and lock files
-COPY package.json yarn.lock ./
+# Copiar package.json y .yarnrc.yml antes que el resto
+COPY package.json yarn.lock .yarnrc.yml ./
 
-# Install dependencies
-RUN npm install --frozen-lockfile
- 
-# Copy the rest of the app
+# Habilitar corepack y preparar Yarn 4.9.0
+RUN corepack enable && \
+    corepack prepare yarn@4.9.0 --activate
+
+# Copiar el resto de los archivos
 COPY . .
 
-# Expose port
-EXPOSE 3000
+# Instalar dependencias
+RUN yarn install
 
-# Start the app
-CMD ["yarn", "dev"]
+# Ejecutar la app
+CMD ["yarn", "start"]  # o lo que uses: dev / worker / api, etc.
