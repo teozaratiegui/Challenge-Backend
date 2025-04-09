@@ -10,6 +10,7 @@ services:
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
+      - ./uploads:/app/uploads
     environment:
       - MONGO_URI=mongodb://mongo:27017/test
       - RABBITMQ_URL=amqp://rabbitmq
@@ -25,6 +26,7 @@ services:
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
+      - ./uploads:/app/uploads
     environment:
       - MONGO_URI=mongodb://mongo:27017/test
       - RABBITMQ_URL=amqp://rabbitmq

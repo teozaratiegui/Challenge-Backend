@@ -3,7 +3,6 @@ import axios from 'axios'
 import fs from 'fs'
 import path from 'path'
 import FormData from 'form-data'
-import fsp from 'fs/promises'
 
 const sendFile = async (filePath: string) => {
   const form = new FormData()
@@ -17,22 +16,6 @@ const sendFile = async (filePath: string) => {
     maxBodyLength: Infinity,
     maxContentLength: Infinity
   })
-}
-
-const deleteUploadedTestFiles = async (suffix: string) => {
-  const uploadsDir = path.resolve(__dirname, '../../../uploads')
-  const files = await fsp.readdir(uploadsDir)
-  const matchedFiles = files.filter(file => file.endsWith(suffix))
-
-  for (const file of matchedFiles) {
-    const fullPath = path.join(uploadsDir, file)
-    try {
-      await fsp.unlink(fullPath)
-      console.log(`🧹 Deleted: ${fullPath}`)
-    } catch (err) {
-      console.warn('⚠️ Failed to delete file:', err)
-    }
-  }
 }
 
 describe('Upload heavy xlsx file concurrently', () => {
@@ -56,12 +39,6 @@ describe('Upload heavy xlsx file concurrently', () => {
 
     if (res2.status === 'fulfilled') {
       expect(res2.value.data).toHaveProperty('taskId')
-    }
-
-    try {
-      await deleteUploadedTestFiles('test_file')
-    } catch (e) {
-      console.warn('⚠️ No se pudo eliminar el archivo:', e)
     }
   }, 40000)
 })

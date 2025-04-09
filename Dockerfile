@@ -16,5 +16,7 @@ COPY . .
 # Instalar dependencias
 RUN yarn install
 
+RUN mkdir -p /app/uploads
+
 # Ejecutar la app
 CMD ["yarn", "start"]  # o lo que uses: dev / worker / api, etc.
