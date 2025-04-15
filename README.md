@@ -32,7 +32,7 @@ docker compose up --build
 ---
 
 ## 🔐 API Authentication
-All endpoints require specific API keys via the `x-api-key` header. These keys are defined in the `.env.example` file:
+All endpoints require specific API keys via the `api-key` header. These keys are defined in the `.env.example` file:
 ```env
 API_KEY_UPLOAD=1182
 API_KEY_STATUS=2002
