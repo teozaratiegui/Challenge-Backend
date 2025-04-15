@@ -45,7 +45,7 @@ API_KEY_DATA=1964
 
 ### 🔼 Upload Excel
 `POST /files`
-- Header: `x-api-key: 1182`
+- Header: `api-key: 1182`
 - Form Data: `file` (must be a `.xlsx` file with `name`, `age`, `nums` headers)
 
 ✅ Example Response:
@@ -57,7 +57,7 @@ API_KEY_DATA=1964
 
 ### 🔍 Check Status
 `GET /files/{id}?limit=10&offset=0`
-- Header: `x-api-key: 2002`
+- Header: `api-key: 2002`
 
 ✅ Response:
 ```json
@@ -73,7 +73,7 @@ API_KEY_DATA=1964
 
 ### 📄 Get Valid Data
 `GET /files/{uuid}/data?limit=10&offset=0`
-- Header: `x-api-key: 1964`
+- Header: `api-key: 1964`
 
 ✅ Response:
 ```json
